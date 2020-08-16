@@ -1,0 +1,124 @@
+
+.row {
+		position: fixed;
+		bottom: 0px;
+		left: 50%;
+		-webkit-transform: translateX( -50%);
+		        transform: translateX( -50%);
+		width: 100%;
+		height: 150rpx;
+		background: #F5F5F5;
+}
+.flexc {
+		display: -webkit-box;
+		display: -webkit-flex;
+		display: flex;
+		-webkit-box-pack: justify;
+		-webkit-justify-content: space-between;
+		        justify-content: space-between;
+}
+.block {
+		overflow: hidden;
+		height: 148rpx;
+}
+.length1 {
+	box-sizing: border-box;
+		overflow-y: scroll;
+		/* min-height: calc(100vh - 236rpx); */
+		padding-bottom: 150rpx;
+}
+.length {
+		overflow-y: scroll;
+		min-height: calc(100vh - 298rpx);
+}
+.green {
+		line-height: 100rpx;
+		color: #1687EB;
+}
+.btn1 {
+		margin: 40rpx auto;
+		border-radius: 16rpx;
+		border: 2px solid #0199FE;
+		color: #0099FF;
+		background: white;
+		display: -webkit-box;
+		display: -webkit-flex;
+		display: flex;
+		text-align: center;
+		line-height: 60rpx;
+		width: 375rpx;
+		height: 68rpx;
+		font-size: 30rpx;
+		box-sizing: border-box;
+}
+.btn1>view {
+		width: 50%;
+}
+.blue {
+		background: #0099FF;
+		color: white;
+}
+.btn {
+		width: 690rpx;
+		height: 88rpx;
+		background: #0084EE;
+		color: white;
+		text-align: center;
+		line-height: 88rpx;
+
+		margin: 30rpx auto;
+		border-radius: 12rpx;
+}
+.next {
+		margin-right: 20rpx;
+		font-size: 30rpx;
+}
+.flex {
+		display: -webkit-box;
+		display: -webkit-flex;
+		display: flex;
+		width: 100%;
+		height: 100%;
+		border-bottom: 1px solid #EEEEEE;
+		box-sizing: border-box;
+}
+input {
+		height: 100%;
+}
+.input {
+		width: 100%;
+		height: 108rpx;
+		background: white;
+		line-height: 108rpx;
+		box-sizing: border-box;
+		padding: 0px 30rpx;
+}
+.blue {
+		background: #0099FF;
+		color: white;
+}
+.gray {
+		color: #B2B1B1;
+}
+.li {
+		margin-top: 10rpx
+}
+.list {
+		width: 100%;
+		height: 160rpx;
+		background: white;
+		box-sizing: border-box;
+		padding: 30rpx;
+		font-size: 30rpx;
+}
+.bigbg {
+		overflow: hidden;
+		height: 100%;
+		width: 100%;
+		background: #F5F5F5;
+		font-size: 16px;
+}
+.fgx {
+		height: 10rpx;
+}
+

@@ -1,0 +1,71 @@
+
+.down_body{
+ width: 100vw;
+ height: 100vh;
+ background-color: #666666;
+}
+.down_popup_top{
+ width: 100vw;
+ height: 100px;
+}
+.down_popup{
+ width: 100vw;
+ height: 450rpx;
+}
+.down_popup_left{
+ height: 450rpx;
+ width: 75rpx;
+ float: left;
+}
+.down_popup_self{
+ width: 600rpx;
+ height: 450rpx;
+ background-color: #FFFFFF;
+ border-radius:10px;
+ float: left;
+}
+.down_popup_title{
+ height: 100rpx;
+ width: 600rpx;
+ color: #ff2400;
+ text-align: center;
+ line-height: 100rpx;
+}
+.down_popup_discript{
+ width: 600rpx;
+ height: 250rpx;
+}
+.down_popup_discript_left{
+ width: 30rpx;
+ height: 250rpx;
+ float: left;
+}
+.down_popup_discript_center{
+ width: 540rpx;
+ height: 250rpx;
+ float: left;
+}
+.down_popup_discript_rich_text{
+ font-size: 15px;
+}
+.down_popup_discript_right{
+ width: 30rpx;
+ height: 250rpx;
+ float: left;
+}
+.down_popup_down{
+ width: 600rpx;
+ height: 100rpx;
+ text-align: center;
+ color: #ff2400;
+ line-height: 100rpx;
+ border-top-style:solid;
+ border-top-width: 1px;
+}
+.down_popup_progress{
+ height: 100rpx;
+ width: 300rpx;
+ padding-left: 175rpx;
+ line-height: 100rpx;
+}
+

@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "个人资料",
+  "usingComponents": {
+    "avatar": "/components/yq-avatar/yq-avatar",
+    "q-spicker": "/components/QuShe-picker/QuShe-picker"
+  }
+}

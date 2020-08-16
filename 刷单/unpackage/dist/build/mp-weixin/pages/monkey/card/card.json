@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "银行卡管理",
+  "usingComponents": {
+    "uni-nav-bar": "/components/uni-nav-bar/uni-nav-bar"
+  }
+}

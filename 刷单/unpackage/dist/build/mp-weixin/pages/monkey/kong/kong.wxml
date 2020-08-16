@@ -1,0 +1,1 @@
+<view class="hidden"><view class="bg"></view><navigator url="../bal_card/bal_card"><view class="btn">添加银行卡</view></navigator></view>

@@ -1,0 +1,102 @@
+{
+  "pages": [
+    "pages/logo/logo",
+    "pages/login/login",
+    "pages/index/index",
+    "pages/resgin/resgin",
+    "pages/face/face",
+    "pages/word/word",
+    "pages/me/me",
+    "pages/me/set/set",
+    "pages/me/name/name",
+    "pages/bank/bank",
+    "pages/bank/card/card",
+    "pages/distribution/distribution",
+    "pages/distribution/detail/detail",
+    "pages/distribution/deposit/deposit",
+    "pages/distribution/tema/tema",
+    "pages/distribution/sales/sales",
+    "pages/monkey/monkey",
+    "pages/monkey/balance/balance",
+    "pages/monkey/card/card",
+    "pages/monkey/bal_card/bal_card",
+    "pages/issue/issue",
+    "pages/api/api",
+    "pages/api/ewm/ewm",
+    "pages/api/mon/mon",
+    "pages/api/screen/screen",
+    "pages/api/xq/xq",
+    "pages/revenue/revenue",
+    "pages/information/information",
+    "pages/information/xq/xq",
+    "pages/index/history/history",
+    "pages/monkey/recharge/recharge",
+    "components/map/map/map",
+    "pages/monkey/kong/kong",
+    "pages/index/screen/screen",
+    "pages/safety/safety",
+    "pages/safety/word/word",
+    "pages/safety/set/set",
+    "pages/safety/administration/administration",
+    "pages/safety/sunter/sunter",
+    "pages/safety/yunredn/yunredn",
+    "pages/index/run/run",
+    "pages/distribution/god/god",
+    "pages/me/sz/sz",
+    "pages/me/aboute/aboute",
+    "pages/index/ren/ren",
+    "pages/monkey/withdraw/withdraw",
+    "pages/monkey/xin_card/xin_card",
+    "pages/monkey/min/min",
+    "pages/me/xieyi/xieyi",
+    "pages/index/hist/hist",
+    "pages/me/wmen/wmen",
+    "pages/api/api_xq/api_xq",
+    "pages/safety/msg/msg",
+    "pages/safety/word1/word1",
+    "pages/monkey/top-up/top-up",
+    "pages/monkey/ewm/ewm",
+    "pages/monkey/fh1/fh1",
+    "pages/monkey/fh/fh"
+  ],
+  "subPackages": [],
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "uni-app",
+    "navigationBarBackgroundColor": "#000000",
+    "backgroundColor": "#F8F8F8"
+  },
+  "tabBar": {
+    "backgroundColor": "white",
+    "iconWidth": "24px",
+    "fontSize": "12px",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "static/home.png",
+        "selectedIconPath": "static/home-blue.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/monkey/monkey",
+        "iconPath": "static/msz.png",
+        "selectedIconPath": "static/msz-blue.png",
+        "text": "存取款"
+      },
+      {
+        "pagePath": "pages/issue/issue",
+        "iconPath": "static/wenti.png",
+        "selectedIconPath": "static/wenti-blue.png",
+        "text": "常见问题"
+      },
+      {
+        "pagePath": "pages/me/me",
+        "iconPath": "static/me.png",
+        "selectedIconPath": "static/me-blue.png",
+        "text": "我的"
+      }
+    ]
+  },
+  "usingComponents": {},
+  "sitemapLocation": "sitemap.json"
+}

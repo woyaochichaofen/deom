@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "流水明细",
+  "usingComponents": {
+    "mescroll-uni": "/components/mescroll-uni/mescroll-uni"
+  }
+}

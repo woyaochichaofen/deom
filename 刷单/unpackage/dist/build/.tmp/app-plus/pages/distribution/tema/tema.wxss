@@ -1,0 +1,32 @@
+
+.icon {
+	border-radius: 9999px;
+	width: 76rpx;
+	height: 76rpx;
+	background-size: contain;
+	background-position: center;
+	margin-right: 36rpx;
+}
+.flex {
+	line-height: 72rpx;
+	font-size: 16px;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	padding: 20rpx 0px;
+	border-bottom: 1px solid #F5F5F5;
+}
+.bg {
+	padding: 0px 30rpx;
+	background: white;
+}
+.fgx {
+	height: 20rpx;
+}
+.bigbg {
+	overflow: hidden;
+	width: 100%;
+	min-height: 100%;
+	background: #F5F5F5;
+}
+

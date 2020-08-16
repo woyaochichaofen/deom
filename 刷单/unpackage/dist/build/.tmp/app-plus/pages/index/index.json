@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "hello",
+  "titleNView": false,
+  "usingComponents": {
+    "uni-nav-bar": "/components/uni-nav-bar/uni-nav-bar"
+  }
+}

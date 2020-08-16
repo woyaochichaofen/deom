@@ -1,0 +1,72 @@
+
+.zz {
+		width: 100%;
+		height: 100vh;
+		background: rgba(0, 0, 0, .3);
+		position: fixed;
+		top: 0px;
+}
+.hidden{
+		overflow: hidden;
+}
+.bs{
+		border-bottom:1px solid #118EEA!important;
+}
+.blue{
+		color: #0087EB ;
+}
+.agreement{
+		display: -webkit-box;
+		display: -webkit-flex;
+		display: flex;
+		margin:26rpx auto 0px ;
+		width: 610rpx;
+		font-size: 12px;
+}
+.res{
+		width: 610rpx;
+		height: 88rpx;
+		background: #0087EB;
+		color: white;
+		border-radius:10rpx ;
+		text-align: center;
+		line-height: 88rpx;
+		margin:128rpx auto 0px;
+}
+.rz{
+		color: #118EEA;
+		font-size: 12px;
+		text-align: right;
+		padding-right: 70rpx;
+		margin-top:20rpx ;
+}
+.phone{
+		font-size: 18px;
+		width: 108rpx;
+}
+.phone1{
+		text-align: right;
+		color: #0087EB;
+		font-size: 14px;
+		width: 200rpx;
+}
+.phone2{
+		text-align: right;
+		color: #B2B2B2;
+		font-size: 14px;
+		width: 300rpx;
+}
+.flex{
+		display: -webkit-box;
+		display: -webkit-flex;
+		display: flex;
+		padding: 40rpx;
+		margin: 0rpx 70rpx;
+		border-bottom: 1px solid #EDEDED;
+}
+.title{
+	margin: 136rpx auto;
+	text-align: center;
+	font-size: 24px;
+}
+

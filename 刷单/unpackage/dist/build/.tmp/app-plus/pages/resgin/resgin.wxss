@@ -1,0 +1,65 @@
+
+.zc {
+	margin-top: 256rpx;
+	text-align: center;
+	font-size: 16px;
+	color: #007AFF;
+}
+.bs {
+	border-bottom: 1px solid #118EEA !important;
+}
+.blue {
+	color: #0087EB;
+}
+.agreement {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-box-pack: justify;
+	-webkit-justify-content: space-between;
+	        justify-content: space-between;
+	margin: 26rpx auto 0px;
+	width: 610rpx;
+	font-size: 12px;
+}
+.res {
+	width: 610rpx;
+	height: 88rpx;
+	background: #0087EB;
+	color: white;
+	border-radius: 10rpx;
+	text-align: center;
+	line-height: 88rpx;
+	margin: 128rpx auto 0px;
+}
+.rz {
+	color: #118EEA;
+	font-size: 12px;
+	text-align: right;
+	padding-right: 70rpx;
+	margin-top: 20rpx;
+}
+.phone {
+	font-size: 16px;
+	width: 108rpx;
+}
+.phone1 {
+	text-align: right;
+	color: #0087EB;
+	font-size: 14px;
+	width: 220rpx;
+}
+.flex {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	padding: 40rpx;
+	margin: 0rpx 70rpx;
+	border-bottom: 1px solid #EDEDED;
+}
+.title {
+	margin: 160rpx auto 136rpx;
+	text-align: center;
+	font-size: 24px;
+}
+

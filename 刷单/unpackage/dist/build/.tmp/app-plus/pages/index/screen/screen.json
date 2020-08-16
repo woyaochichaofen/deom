@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "筛选",
+  "usingComponents": {
+    "w-picker": "/components/w-picker/w-picker"
+  }
+}

@@ -1,0 +1,15 @@
+
+.red{
+		color: #DC0A23;
+}
+.ewm{
+		width: 400rpx;
+		height: 400rpx;
+		margin:40rpx auto;
+}
+.center{
+	padding-top: 80rpx;
+	font-size: 16px;
+	text-align: center;
+}
+

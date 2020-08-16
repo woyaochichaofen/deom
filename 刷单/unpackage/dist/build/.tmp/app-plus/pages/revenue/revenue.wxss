@@ -1,0 +1,50 @@
+
+.bigbg{
+		width: 100%;
+		height:100%;background: #F5F5F5;
+}
+.flex{
+		display: -webkit-box;
+		display: -webkit-flex;
+		display: flex;
+}
+.red{
+		color: #E31111;
+}
+.input1{
+		box-sizing: border-box;
+		width: 100%;
+		height: 100%;
+		line-height: 88rpx;
+		display: -webkit-box;
+		display: -webkit-flex;
+		display: flex;-webkit-box-pack: justify;-webkit-justify-content: space-between;justify-content: space-between;
+}
+.input{
+	font-size: 14px;
+	width: 100%;
+	height: 88rpx;
+	box-sizing: border-box;
+	padding: 0px 30rpx;
+	background: white;
+}
+.bottom{
+	border-bottom: 1px solid #EEEEEE;
+}
+.icon{
+	margin-right: 24rpx;
+	width: 40rpx;
+	height: 40rpx;
+	background-size: cover;
+	background-position: center;
+	margin-top: 26rpx;
+}
+.icon1{
+	margin-right: 24rpx;
+	margin-top: 26rpx;
+	width: 40rpx;
+	height: 40rpx;
+	background-size: cover;
+	background-position: center;
+}
+

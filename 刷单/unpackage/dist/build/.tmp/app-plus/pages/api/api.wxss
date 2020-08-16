@@ -1,0 +1,124 @@
+
+.righttext {
+	width: 50%;
+	color: #0087EB;
+	text-align: center;
+}
+.lefttext {
+	width: 50%;
+	font-size: 16px;
+	color: #999999;
+	border-right: 1px solid #DEDEDE;
+}
+.bottomtext {
+	line-height: 120rpx;
+	text-align: center;
+	border-top: 1px solid #DEDEDE;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-box-pack: justify;
+	-webkit-justify-content: space-between;
+	        justify-content: space-between;
+	height: 120rpx;
+}
+.titeltext {
+	margin-bottom: 50rpx;
+	font-size: 18px;
+	text-align: center;
+	margin-top: 80rpx;
+}
+.blocktext {
+	z-index: 999;
+	overflow: hidden;
+	width: 600rpx;
+	height: 340rpx;
+	border-radius: 12rpx;
+	background: white;
+	position: absolute;
+	top: 400rpx;
+	left: 50%;
+	-webkit-transform: translateX(-50%);
+	        transform: translateX(-50%);
+}
+.zztext {
+	width: 100%;
+	height: 100vh;
+	position: fixed;
+	top: 0rpx;
+	background: rgba(0, 0, 0, .3);
+}
+.jin{
+	width: 50rpx;
+	height: 50rpx;
+	background: red;
+	border-radius: 100%;
+	line-height: 50rpx;
+	color: white;
+	text-align: center;
+}
+.height {
+	height: 100rpx;
+	width: 100%;
+}
+.input {
+	font-size: 14px;
+	height: 130rpx;
+	padding: 30rpx;
+	box-sizing: border-box;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-box-pack: justify;
+	-webkit-justify-content: space-between;
+	        justify-content: space-between;
+	border-bottom: 1px solid #EDEDED;
+}
+.flex {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	width: 450rpx;
+}
+.zfb {
+	margin-right: 20rpx;
+	width: 70rpx;
+	height: 70rpx;
+}
+.red {
+	width: 330rpx;
+	height: 68rpx;
+	border-radius: 12rpx;
+	background: #E31111;
+}
+.blue {
+	width: 330rpx;
+	height: 68rpx;
+	border-radius: 12rpx;
+	background: #0087EB;
+}
+.bottom {
+	background: white;
+	text-align: center;
+	line-height: 64rpx;
+	font-size: 16px;
+	color: white;
+	position: fixed;
+	bottom: 0px;
+	width: 100%;
+	height: 100rpx;
+	box-sizing: border-box;
+	border-top: 1px solid #E0E0E0;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-box-pack: justify;
+	-webkit-justify-content: space-between;
+	        justify-content: space-between;
+	padding: 14rpx 30rpx;
+}
+.bg {
+	width: 36rpx;
+	height: 36rpx;
+}
+

@@ -1,0 +1,116 @@
+
+.row{
+	box-sizing: border-box;
+	padding: 0px 50rpx;
+	position: fixed;
+	bottom: 0px;
+	left: 50%;
+	-webkit-transform: translateX( -50%);
+	        transform: translateX( -50%);
+	width: 100%;
+	height: 150rpx;
+	background: #F5F5F5;
+}
+.righttext {
+	width: 50%;
+	color: #0087EB;
+	text-align: center;
+}
+.lefttext {
+	width: 50%;
+	font-size: 16px;
+	color: #999999;
+	border-right: 1px solid #DEDEDE;
+}
+.bottomtext {
+	line-height: 120rpx;
+	text-align: center;
+	border-top: 1px solid #DEDEDE;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-box-pack: justify;
+	-webkit-justify-content: space-between;
+	        justify-content: space-between;
+	height: 120rpx;
+}
+.titeltext {
+	margin-bottom: 50rpx;
+	font-size: 18px;
+	text-align: center;
+	margin-top: 80rpx;
+}
+.blocktext {
+	z-index: 999;
+	overflow: hidden;
+	width: 600rpx;
+	height: 300rpx;
+	border-radius: 12rpx;
+	background: white;
+	position: absolute;
+	top: 400rpx;
+	left: 50%;
+	-webkit-transform: translateX(-50%);
+	        transform: translateX(-50%);
+}
+.zztext {
+	width: 100%;
+	height: 100vh;
+	position: fixed;
+	top: 0rpx;
+	background: rgba(0, 0, 0, .3);
+}
+.gray {
+	color: #B2B1B1;
+}
+.blue {
+	background: #0099FF !important;
+}
+.flex {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-box-pack: justify;
+	-webkit-justify-content: space-between;
+	        justify-content: space-between;
+}
+.btn {
+	font-size: 30rpx;
+	margin: 40rpx 0px;
+	/* margin-top: 154rpx; */
+	background: red;
+	width: 300rpx;
+	height: 68rpx;
+	border-radius: 12rpx;
+	color: white;
+	text-align: center;
+	line-height: 68rpx;
+}
+.time {
+	font-size: 28rpx;
+	text-align: right;
+	color: #B2B1B1;
+	margin-top: 30rpx;
+}
+.right {
+	width: 100rpx;
+	margin-right: 54rpx;
+}
+.input {
+	height: 105rpx;
+	box-sizing: border-box;
+	border-bottom: 1px solid #F5F5F5;
+	font-size: 30rpx;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	        align-items: center;
+}
+.padding {
+	width: 100%;
+	box-sizing: border-box;
+	padding: 20rpx 50rpx 170rpx;
+}
+

@@ -1,0 +1,1 @@
+.zfb{margin-right:20rpx;width:70rpx;height:70rpx}.input{font-size:14px;height:130rpx;padding:30rpx;box-sizing:border-box;display:-webkit-box;display:-webkit-flex;display:flex;-webkit-box-pack:justify;-webkit-justify-content:space-between;justify-content:space-between;border-bottom:1px solid #ededed}.flex{display:-webkit-box;display:-webkit-flex;display:flex}

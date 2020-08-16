@@ -1,0 +1,1 @@
+<view><view class="top"><input class="input" type="text" placeholder-class="naocan" placeholder="请输入名称"/></view><view class="button">保存</view></view>

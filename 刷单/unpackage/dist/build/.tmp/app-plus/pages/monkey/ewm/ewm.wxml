@@ -1,0 +1,1 @@
+<view class="center"><view class="title">充值金额:<text class="red">{{"￥"+num}}</text></view><view><view><image class="ewm" src="{{icon.qrcode}}" mode></image></view></view><view class="bianhao">{{'订单编号：'+icon.order_no+''}}</view><view class="time">请在规定时间内扫码支付：<text class="red">{{time}}</text></view></view>

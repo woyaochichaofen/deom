@@ -1,0 +1,1 @@
+<view><view class="yes"></view><view class="flex"><view data-event-opts="{{[['tap',[['mon',['$event']]]]]}}" class="mon" bindtap="__e">返回首页</view></view></view>

@@ -1,0 +1,1 @@
+<view class="bg"><view class="title">{{''+title+''}}</view><view class="time">{{''+time+''}}</view><view><rich-text nodes="{{data}}"></rich-text></view></view>

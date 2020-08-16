@@ -1,0 +1,128 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*每个页面公共css */
+.rich{
+	max-width: 100% !important;
+}
+.naocan{
+	color:#D2D2D2
+}
+.st{
+	font-size: 32rpx;
+	color: #BBBBBB;
+}
+.getbar {
+	width: 50rpx;
+	height: 32rpx;
+	background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAsCAIAAAD0Cz8pAAAFNklEQVRIDZ1XW09cVRQ+Z5/rwAwzDBSKU0oBuZRLaVLbWOMlNTFgokZNE8Vao8bEFx/03Qce/QU1MfVFH9TamEbbNG1MiFTFS1OEIqXKrQOMXIbLcJk51739Ts50GAZmmOGEkH1g55v1rfWtb63hGWPcvp6FOB1csGfW7MN+4USlGFB5wIj7gLIZlzDZrWnrhzHj/rLVWi5U+4oCqrAfOHDZNNnYiv3ZX4n+WUuz2PgKfa8jSbHg6DYNdmfO+qQ/MTBvx00WUMnJKtErOUwLjk6zuP6Ideme/nvE3DCZT+aPVwrvHlMPeklhcCBjU25o0bo2ZlwfN1Z1VizxHZXii4/KnXWSRywwOtPmVjX65bB2bdyIbFDCc7UB4dUm5c1WJcU0X7IILbxmX7ij3Zw0Z9epJHDlReT940pXnVQiJ+MqgOxI1IYmro4ZM+uU5/iGIOluUZ6tkQ/5iJhMmouWh+6mYvbNSeO7+zrEIRCuMSh01crnWpTKYqI+TFkSLLeMKeMMm30/Zlwa1f/8zwIrSL+zVn6nQ63xO6Ld+eTS3VKCIlnfjOh3F2zkXiL8+Vb1bLNc59/OMA01KxzSdGvavDiojSzZaIODxeT5evmlBrmlTNzJMQW4O9xSgvXPmt+O6kBEhwLryUPi2+3KsQoxoGwrZQrIPWTCwV9Myg3MW5dHjSv/GnhFLKdD4lvt6lPVD1spAyPtNRMOrfN31P50QOsLm651ddZKkMUzeWABdhvcusGGFqwLAxpaclmjkGh7hfjaUeWJkFSSk2Mqvi042MPwYlKusA20d9sB8Vyr8nS1FPJlLWUKyD0k4SCxyRhFsr64q6/rDFpvCgovN8hwC3l3hWXgJF8dOItyMZ1+PqShjaIJIDvSP9vstLdMuFyF3IHpwC3G6df39J/C5vQalQnfGCTn29SuOrmimPAFgXGckxSY140Jc2rVhlOrItdQKp45LDWXCeiEQh8HDoIAX45zQuF5XhY5vFGHdMGPA1flJR+dUjGQFBGR0hsTxsXBxK8Rq2AwV3demT9VJXa3KvDFn2fMNZ39OGXCr1EHKK6g9DmlkAh3oIjAWpE7KBmD6kGMAhEWgkF1xE8wFvKMNKk73K71CzAMgYePU7TEKIzE0BEjlNwQFPCR+TxCT09P6p5XIhgCiGVyla5oLGE5/Rv0EMSOn9S1HIet6HAJDVBdQiBgUL46bmBEQNWXR3WkTyIyYswB5P5rGxz+BHZQ3CuNikGxPOjhGMVs9Ug8NpBuRSlVSe6ey4RzP+TxkGhSBlP4akTH798iJgz5cAk5HZLQKshvtmdb7tIvIVkhnxDT2dwm2zAYfHA4aodKSEURgbDSb6afs8JJAg+/q/GThThbTjBUBr0Y0xiwsNBlGxe7k3U/EJYJdhj7ls16wyYGyC8zpl/hS1X+TI2kCvzOps4FB1CwwlKD9gXrvmkLGex9gKxymP91AQGRZtDeW02KwD9XK39wwtNUJqDuS5ozMD/ui0NGhp2eN+ecNXepiwgAiPD6Si+Z30TDMDR1NOHs1BiSj/iE9ELvQdYFRY6gjxfqZexksK0/IlY0Tq9PGDBH1OSxqq1VJS84gKJnyzz8Gy0KCM5t0PFVe3zFvvIPdhjuSEBAmG5T7002xRoHxFLmQVNzt+csTHfUBxoCZH1AQMVxYe9SpMMhTegNjJEPT3rgQDBtrDKIEcuRey1fsilQ+A3m3OtHlYVN2hvmIMb0IVAwHHAhFyDCB2Guo0tWW7kYVJMs+X1/idItFrecfRKWCxm5W+3/ULRSPm6PW40AAAAASUVORK5CYII=) no-repeat;
+	background-size: contain;
+	background-position: center;
+	position: fixed;
+	top: 88rpx;
+	left: 30rpx;
+}
+page {
+	height: 100%;
+}
+.fgx {
+	height: 20rpx;
+}
+.hidden {
+	overflow: hidden;
+	background: white;
+	height: 100%;
+}
+.uni-checkbox-input {
+	width: 24rpx !important;
+	height: 24rpx !important;
+	border-radius: 990rpx !important !important !important;
+	border: 1px solid #EDEDED !important !important;
+	margin-right: 12rpx !important;
+}
+

@@ -1,0 +1,2 @@
+setCssToHead([".",[1],"red{ color: #DC0A23; }\n.",[1],"ewm{ width: ",[0,400],"; height: ",[0,400],"; margin:",[0,40]," auto; }\n.",[1],"center{ padding-top: ",[0,80],"; font-size: 16px; text-align: center; }\n",],undefined,{path:"./pages/monkey/ewm/ewm.wxss"})();
+document.dispatchEvent(new CustomEvent("generateFuncReady", { detail: { generateFunc: $gwx('./pages/monkey/ewm/ewm.wxml') } }));

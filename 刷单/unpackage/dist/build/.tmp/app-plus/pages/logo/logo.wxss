@@ -1,0 +1,35 @@
+
+.btn {
+	width: 120rpx;
+	height: 40rpx;
+	font-size: 12px;
+	position: fixed;
+	top: 60rpx;
+	right: 40rpx;
+	border-radius: 20%;
+	z-index: 999;
+	background: rgba(0, 0, 0, .4);
+	text-align: center;
+	line-height: 40rpx;
+	color: white;
+}
+.size {
+	background: #f7fbff;
+	width: 100%;
+	height: 100vh;
+}
+.time {
+	position: fixed;
+	top: 60rpx;
+	left: 40rpx;
+	font-size: 16px;
+	width: 40rpx;
+	height: 40rpx;
+	background: rgba(0, 0, 0, .4);
+	text-align: center;
+	line-height: 40rpx;
+	color: white;
+	border-radius: 100%;
+	z-index: 999;
+}
+

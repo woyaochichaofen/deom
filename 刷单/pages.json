@@ -1,0 +1,418 @@
+{
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		{
+			"path": "pages/logo/logo",
+			"style": {
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/resgin/resgin",
+			"style": {
+				"navigationStyle": "custom"
+			}
+		}, {
+			"path": "pages/login/login",
+			"style": {
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		}, {
+			"path": "pages/index/index",
+			"style": {
+				"navigationBarTitleText": "hello",
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		}, {
+			"path": "pages/resgin/resgin",
+			"style": {
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		}, {
+			"path": "pages/face/face",
+			"style": {
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		}, {
+			"path": "pages/word/word",
+			"style": {
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		}, {
+			"path": "pages/me/me",
+			"style": {
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		}, {
+			"path": "pages/me/set/set",
+			"style": {
+				"navigationBarTitleText": "个人资料"
+			}
+		}, {
+			"path": "pages/me/name/name",
+			"style": {}
+		}, {
+			"path": "pages/bank/bank",
+			"style": {}
+		}, {
+			"path": "pages/bank/card/card",
+			"style": {}
+		}, {
+			"path": "pages/distribution/distribution",
+			"style": {
+				"navigationBarTitleText": "代理中心"
+			}
+		}, {
+			"path": "pages/distribution/detail/detail",
+			"style": {
+				"navigationBarTitleText":"佣金明细"
+			}
+		}, {
+			"path": "pages/distribution/deposit/deposit",
+			"style": {
+				"navigationBarTitleText":"提现"
+			}
+		}, {
+			"path": "pages/distribution/tema/tema",
+			"style": {
+				"navigationBarTitleText": "我的团队",
+				"disableScroll": true,
+				"app-plus": {
+					"bounce": "none"
+				}
+			}
+		}, {
+			"path": "pages/distribution/sales/sales",
+			"style": {
+				"navigationBarTitleText":"分销订单"
+			}
+		}, {
+			"path": "pages/monkey/monkey",
+			"style": {
+				"navigationBarTitleText": "我的余额",
+				"navigationBarBackgroundColor": "white"
+			}
+		}, {
+			"path": "pages/monkey/balance/balance",
+			"style": {
+				"navigationBarTitleText": "银行卡管理"
+			}
+		}, {
+			"path": "pages/monkey/card/card",
+			"style": {
+				"navigationBarTitleText": "银行卡管理",
+				"app-plus":{
+					"titleNView":false
+				}
+			}
+		}, {
+			"path": "pages/monkey/bal_card/bal_card",
+			"style": {
+				"navigationBarTitleText": "添加银行卡"
+			}
+		}, {
+			"path": "pages/issue/issue",
+			"style": {
+				"navigationBarBackgroundColor": "white",
+				"navigationBarTitleText": "常见问题"
+			}
+		}, {
+			"path": "pages/api/api",
+			"style": {
+				"navigationBarTitleText": "hello",
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		}, {
+			"path": "pages/api/ewm/ewm",
+			"style": {
+				"navigationBarTitleText": "添加收款码"
+			}
+		}, {
+			"path": "pages/api/mon/mon",
+			"style": {
+				"navigationBarTitleText": "添加API收款码"
+			}
+		}, {
+			"path": "pages/api/screen/screen",
+			"style": {
+				"navigationBarTitleText": "筛选"
+			}
+		}, {
+			"path": "pages/api/xq/xq",
+			"style": {
+				"navigationBarTitleText": "收款码"
+			}
+		}
+
+		, {
+			"path": "pages/revenue/revenue",
+			"style": {
+				"navigationBarTitleText": "佣金费率"
+			}
+		}, {
+			"path": "pages/information/information",
+			"style": {
+				"navigationBarTitleText": "消息提醒"
+			}
+		}, {
+			"path": "pages/information/xq/xq",
+			"style": {
+				"navigationBarTitleText": "详情"
+			}
+		}, {
+			"path": "pages/index/history/history",
+			"style": {
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		}, {
+			"path": "pages/monkey/recharge/recharge",
+			"style": {
+				"navigationBarTitleText": "充值",
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		}, {
+			"path": "components/map/map/map",
+			"style": {}
+		}, {
+			"path": "pages/monkey/kong/kong",
+			"style": {
+				"navigationBarTitleText": "银行卡管理"
+			}
+		}, {
+			"path": "pages/index/screen/screen",
+			"style": {
+				"navigationBarTitleText": "筛选"
+			}
+		}, {
+			"path": "pages/safety/safety",
+			"style": {
+				"navigationBarTitleText": "安全中心"
+			}
+		}, {
+			"path": "pages/safety/word/word",
+			"style": {
+				"navigationBarTitleText": "修改登录密码"
+			}
+		}, {
+			"path": "pages/safety/set/set",
+			"style": {
+				"navigationBarTitleText": "设置支付密码"
+			}
+		}, {
+			"path": "pages/safety/administration/administration",
+			"style": {
+				"navigationBarTitleText": "支付管理"
+			}
+		}, {
+			"path": "pages/safety/sunter/sunter",
+			"style": {
+				"navigationBarTitleText": "修改支付密码"
+			}
+		}, {
+			"path": "pages/safety/yunredn/yunredn",
+			"style": {
+				"navigationBarTitleText": "找回支付密码"
+			}
+		}, {
+			"path": "pages/index/run/run",
+			"style": {
+				"navigationBarTitleText": "城市热度榜"
+			}
+		}, {
+			"path": "pages/distribution/god/god",
+			"style": {
+				"navigationBarTitleText":"邀请好友"
+			}
+		}, {
+			"path": "pages/me/sz/sz",
+			"style": {
+				"navigationBarTitleText":"设置"
+			}
+		}
+	    ,{
+            "path" : "pages/me/aboute/aboute",
+            "style" : {
+				"navigationBarTitleText":"关于我们"
+			}
+        }
+        ,{
+            "path" : "pages/index/ren/ren",
+            "style" : {
+				"navigationBarTitleText": "人物热度榜"
+			}
+        }
+        ,{
+            "path" : "pages/monkey/withdraw/withdraw",
+            "style" : {
+				"navigationBarTitleText":"提现"
+			}
+        }
+        ,{
+            "path" : "pages/monkey/xin_card/xin_card",
+            "style" : {
+				"navigationBarTitleText":"选择银行卡"
+			}
+        }
+        ,{
+            "path" : "pages/monkey/min/min",
+            "style" : {
+				"navigationBarTitleText":"流水明细"
+			}
+        }
+        ,{
+            "path" : "pages/me/xieyi/xieyi",
+            "style" : {
+				"navigationBarTitleText":"码上赚用户协议"
+			}
+        }
+        ,{
+            "path" : "pages/index/hist/hist",
+            "style" : {
+				"navigationBarTitleText":"详情"
+			}
+        }
+        ,{
+            "path" : "pages/me/wmen/wmen",
+            "style" : {
+				"navigationBarTitleText":"联系我们"
+			}
+        }
+        ,{
+            "path" : "pages/api/api_xq/api_xq",
+            "style" : {
+				"navigationBarTitleText":"收款码详情"
+			}
+        }
+        ,{
+            "path" : "pages/safety/msg/msg",
+            "style" : {
+				"navigationBarTitleText":"",
+				"navigationBarBackgroundColor":"white"
+			}
+        }
+        ,{
+            "path" : "pages/safety/word1/word1",
+            "style" : {
+				"navigationBarTitleText":"找回支付密码"
+			}
+        }
+        ,{
+            "path" : "pages/monkey/top-up/top-up",
+            "style" : {
+				"navigationBarTitleText":"支付方式"
+			}
+        }
+        ,{
+            "path" : "pages/monkey/ewm/ewm",
+            "style" : {
+				"navigationBarTitleText":"扫码支付"
+			}
+        },
+		{
+		    "path" : "pages/monkey/fh1/fh1",
+		    "style" : {
+				"navigationBarTitleText":"支付失败"
+			}
+		},
+		{
+		    "path" : "pages/monkey/fh/fh",
+		    "style" : {
+				"navigationBarTitleText":"支付成功"
+			}
+		}
+        ,{
+            "path" : "components/com/com",
+            "style" : {}
+        }
+        ,{
+            "path" : "pages/me/pdd/pdd",
+            "style" : {
+					"navigationBarTitleText":"拼多多"
+			}
+        }
+        ,{
+            "path" : "pages/me/pdd/submit/submit",
+            "style" : {
+				"navigationBarTitleText":"表单详情"
+			}
+        }
+        ,{
+            "path" : "pages/me/pdd/show/show",
+            "style" : {
+				"navigationBarTitleText":"修改表单"
+			}
+        }
+        ,{
+            "path" : "pages/me/pdd/zero/zero",
+            "style" : {
+            	"navigationBarTitleText":"拼多多"
+            }
+        }
+        ,{
+            "path" : "pages/safety/password/password",
+            "style" : {
+				"navigationBarTitleText":"找回登录密码"
+			}
+        }
+        ,{
+            "path" : "pages/list/list",
+            "style" : {
+				"navigationBarTitleText":"刷单"
+			}
+        }
+    ],
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "uni-app",
+		"navigationBarBackgroundColor": "#F8F8F8",
+		"backgroundColor": "#F8F8F8"
+	},
+	"tabBar": {
+		"backgroundColor": "white",
+		"iconWidth": "24px",
+		"fontSize": "12px",
+		"list": [{
+				"pagePath": "pages/index/index",
+				"iconPath": "static/home.png",
+				"selectedIconPath": "static/home-blue.png",
+				"text": "首页"
+			},
+			{
+				"pagePath": "pages/monkey/monkey",
+				"iconPath": "static/msz.png",
+				"selectedIconPath": "static/msz-blue.png",
+				"text": "存取款"
+			},
+			{
+				"pagePath": "pages/issue/issue",
+				"iconPath": "static/wenti.png",
+				"selectedIconPath": "static/wenti-blue.png",
+				"text": "常见问题"
+			},
+			{
+				"pagePath": "pages/me/me",
+				"iconPath": "static/me.png",
+				"selectedIconPath": "static/me-blue.png",
+				"text": "我的"
+			}
+
+		]
+	}
+}

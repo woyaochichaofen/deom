@@ -1,0 +1,2 @@
+setCssToHead([".",[1],"rich{ max-width: 100% !important; }\n.",[1],"title{ font-size: 20px; margin-bottom: ",[0,30],"; }\n.",[1],"time{ color: #666666; font-size: 12px; margin-bottom: ",[0,30],"; }\n.",[1],"bg{ padding: ",[0,20],"; }\n",],undefined,{path:"./pages/information/xq/xq.wxss"})();
+document.dispatchEvent(new CustomEvent("generateFuncReady", { detail: { generateFunc: $gwx('./pages/information/xq/xq.wxml') } }));

@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "收款码详情",
+  "usingComponents": {
+    "avatar": "/components/yq-avatar/yq-avatar"
+  }
+}

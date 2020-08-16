@@ -1,0 +1,1 @@
+<view class="bigbg"><block wx:for="{{data}}" wx:for-item="item" wx:for-index="__i0__"><view class="input"><view class="input1 bottom"><view class="flex"><view><image class="icon" src="{{item.logo}}" mode></image></view><view>{{''+item.name+''}}</view></view><view class="red">{{''+item.rate+''}}</view></view></view></block></view>

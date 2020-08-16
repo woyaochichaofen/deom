@@ -1,0 +1,34 @@
+<!--pages/share/home.wxml-->
+<view class="share">
+  <swiper class="banner" previous-margin="20px" next-margin="20px" duration="500" circular="true" style='height:{{Hei}}' bindchange="changIndex">
+    <block wx:for="{{qrShare}}">
+      <swiper-item>
+          <image src="{{item}}" bindload='imgH' class="slide-image" mode="widthFix"/>
+      </swiper-item>
+    </block>
+  </swiper>
+  <view class="share-btn shadow" bindtap='showDisplay'>分享</view>
+</view>
+
+
+<view class="wrap-box" style='display:{{display}}' bindtap='closeDisplay'></view>
+<view class="btn {{disClass}}">
+  <text class="h5">分享海报到好友，轻松吸引朋友加入海川尚选</text>
+  <view class="btn-box">
+    
+    <view class="btn-box-li">
+      <button class="btn-box-li-b" open-type="share">
+        <view class="btn-box-li-img img-fri" mode="widthFix"></view>
+        <text class="btn-box-li-t">微信好友</text>
+      </button>
+    </view>
+    
+    <view class="btn-box-li">
+      <button class="btn-box-li-b" bindtap='download'>
+        <view class="btn-box-li-img img-xi" mode="widthFix"></view>
+        <text class="btn-box-li-t">保存海报</text>
+      </button>
+    </view>
+    
+  </view>
+</view>

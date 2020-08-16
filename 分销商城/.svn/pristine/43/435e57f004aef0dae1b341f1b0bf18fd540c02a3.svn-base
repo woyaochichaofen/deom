@@ -1,0 +1,16 @@
+var WxApiRoot = 'http://qihaoshop.case.gzqihao.com/';
+
+var app = getApp();
+module.exports = {
+  UserInfo: WxApiRoot + 'index',                      //授权用户信息
+  Detail: WxApiRoot + 'detail',                       //请求用户信息
+
+  Editmobile: WxApiRoot + 'editmobile',                //修改、绑定手机号码
+  SendCode: WxApiRoot + 'sendCode',                    //短信接口
+
+  Getaddress: WxApiRoot + 'getaddress',                //获取我的收货地址
+  Addaddress: WxApiRoot + 'addaddress',                //新增收货地址
+  Editaddress: WxApiRoot + 'editaddress',              //修改收货地址
+
+  Region: WxApiRoot + 'api/v1/api/region',                //修改收货地址
+}

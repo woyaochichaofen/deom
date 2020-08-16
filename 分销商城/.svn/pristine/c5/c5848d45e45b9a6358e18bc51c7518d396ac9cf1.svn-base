@@ -1,0 +1,56 @@
+.box {
+  background: #fff;
+  /* padding: 30px;
+  margin: 15px; */
+  /* border-radius: 10px; */
+  width: 100%;
+  height: auto;
+  background: #68af45;
+  padding: 30px 15px 30px 15px;
+  overflow: hidden;
+  text-align: center;
+}
+.box-image{
+  width: 90px;
+  height: 90px;
+  margin: 0 auto;
+  margin-bottom: 30px;
+  overflow: hidden;
+  background-size:90%;
+  background-repeat:no-repeat;
+  background-position:center center; 
+}
+
+.box-text{
+  color: rgba(255,255,255,0.9);
+  font-size: 13px;
+}
+
+.green{
+  background-color: #56bb37 !important;
+  color: rgba(255,255,255,0.9);
+}
+
+.hint{
+  /* padding: 15px; */
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  color: #333333;
+  font-size: 14px;
+  padding: 0 15px;
+  margin-top: 20px;
+  font-family: '微软雅黑'
+}
+.paddingbig{
+  padding: 20px 15px;
+}
+/* list.menu.card-menu {
+  margin: 5px 15px;
+}
+.foot{
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+} */

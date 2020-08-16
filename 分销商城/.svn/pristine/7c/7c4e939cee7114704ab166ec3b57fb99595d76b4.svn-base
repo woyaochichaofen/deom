@@ -1,0 +1,76 @@
+
+<!-- banner -->
+<swiper class="banner" autoplay="true" duration="500" circular="true" style='height:{{Hei}}'>
+  <block wx:for="{{bannerList}}">
+    <swiper-item bindtap="goGoods" data-id="{{item.url}}">
+        <image src="{{item.logo}}" bindload='imgH' class="slide-image" mode="widthFix"/>
+    </swiper-item>
+  </block>
+</swiper>
+
+
+<block wx:for="{{biaoti}}" wx:for-item="itemName">
+<view class="searchBar">
+  <input type="input"/>
+  <view hidden="{{searchBarHidden}}" bindtap="BarHidden">
+    <icon class="weui-icon-search" type="search" size="18" color="#666666"/>
+    <text>大家都在搜“夏季新品”</text>
+  </view>
+  <image src="/image/xiaoxi.png"></image>
+</view>
+
+
+
+
+<!-- 新人福利 -->
+<view class="box NewFuliviewD">
+  <view><image src="{{itemName.url}}" class="boximg"></image></view>
+  <view class="NewFuliview" wx:for="{{NewFuli}}">
+    {{item.txt1}}
+    <text>{{item.txt}}</text>
+    <image src="{{item.url}}"/>
+  </view>
+</view>
+
+
+<!-- 爆款专区 -->
+<view class="box">
+  <view><image src="{{itemName.url1}}" class="boximg"></image></view>
+  <view class="Baokuan" wx:for="{{Baokuan}}">
+    <image src="{{item.url}}"/>
+    <text>{{item.txt}}</text>
+    <text>{{item.txt1}}</text>
+    <text>新品</text>
+    <text>\n{{item.txt2}}</text>
+  </view>
+</view>
+
+<!-- 每日专享 -->
+<view class="box">
+  <view><image src="{{itemName.url2}}" class="boximg"></image></view>
+  <scroll-view class="everDay" scroll-x>
+    <view wx:for="{{everd}}">
+      <image src="{{item.url}}"></image>
+      <text>{{item.txt}}</text>
+      <text>{{item.txt1}}</text>
+      <text>{{item.txt2}}</text>
+    </view>
+  </scroll-view>
+</view>
+
+
+<!-- 精选 -->
+<view class="box" style="height:680rpx;">
+  <view><image src="{{itemName.url3}}" class="boximg"></image></view>
+  <view class="Selected" wx:for="{{Selected}}">
+    <image src="{{item.url}}"></image>
+    <view>
+      <text>{{item.txt}}</text>
+    </view>
+  </view>
+</view>
+</block>
+
+
+<!-- 猜你喜欢 -->
+<caiLike caiLike="{{caiLike}}"/>

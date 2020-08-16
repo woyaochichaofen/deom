@@ -1,0 +1,201 @@
+.dingdan-body{
+  background: #f6f6f6;
+}
+.swiper{
+  width:100%;
+  height:100vh;
+  overflow: hidden
+}
+.topTabSwiper{
+  border-bottom: 1px solid #ccc; 
+  background: #fff;
+  /* zoom: 1; */
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: auto;
+  z-index: 999;
+}
+.tab{
+  float: left;
+  width: 33.33333%;
+  text-align: center;
+  padding: 10rpx 0 30rpx; 
+  }
+
+.topTabSwiper:after{
+  content: ""; 
+  clear: both;
+  display: block;
+  }
+.tabBorer{
+  border-bottom: 1px solid #ff6b00; 
+  color: #ff7a14;
+  }
+.swiper{
+  width: 100%;
+  }
+.swiper_con{
+  /* text-align: center;  */
+  width: 100%; 
+  height: auto;
+  /* overflow: hidden; */
+  padding-top: 80rpx; 
+  /* padding: 80rpx 0; */
+  }
+
+
+/* 暂无更多数据 */
+.dingdan-suoju{
+  /* background: #f6f6f6; */
+  text-align: center;
+  color:#666;
+  line-height: 50px;
+  /* padding:16rpx; */
+  /* margin-top:-80rpx; */
+}
+
+/* 未使用的优惠卷 */
+.wsy-yhj{
+  /* margin-top:-80rpx; */
+  background: #fff;
+  /* padding:40rpx 0; */
+}
+.wsy-list{
+  margin:0 20rpx;
+  border-top:2rpx solid #ff7711;
+  border-bottom:2rpx solid #ff7711;
+  height:190rpx;
+  overflow: hidden;
+  margin-top:20rpx;
+  position: relative;
+}
+.wsy-left{
+  height:100%;
+}
+/* .wsy-right{
+  width:40rpx;
+  height:100%;
+  background: #ff7711;
+  float: right;
+  font-size: 36rpx;
+  color: #fff;
+  padding:20rpx 73rpx;
+  line-height: 38rpx;
+} */
+.wsy-right{
+  float: right;
+  width:186rpx;
+  color: #fff;
+  background: #ff7711;
+}
+.wsy-right-text{
+  width:40rpx;
+  margin:0 auto;
+  font-size: 36rpx;
+  padding-top:26rpx;
+}
+.yuan{
+  display: flex;
+  flex-flow: column nowrap;
+}
+.yuan view{
+  width:22rpx;
+  height:25rpx;
+  border-radius: 50%;
+  background: #fff;
+  margin-top:8rpx;
+  border-right:2rpx solid #ff7711;
+}
+.yuan1{
+  position: relative;
+  top:-168rpx;
+  left:176rpx;
+}
+.yuan2{
+  position: absolute;
+  top:-4rpx;
+  left:-12rpx;
+  z-index: 90;
+}
+.wsycenter{
+  text-align: left;
+  padding-left:96rpx;
+  color:#ff7711;
+  position: relative;
+}
+.wsycenter::before{
+  content: "";
+  display: block;
+  width:90rpx;
+  height:110%;
+  border-left: 2rpx solid #ff7711;
+  position: absolute;
+  top:0;
+  left:0rpx;
+  z-index:-0;
+}
+.wsytext1{
+  font-size: 36rpx;
+  margin-top:10rpx;
+}
+.wsytext1>text{
+  font-size: 90rpx;
+  padding-right: 14rpx;
+}
+.wsytext2{
+  margin-top:0rpx;
+}
+.wsytext3{
+  font-size: 26rpx;
+  color: rgb(202, 201, 201);
+  margin-top:10rpx;
+}
+/* 已使用 */
+.ysytext{
+  color:#ffac6e;
+}
+.ysytext::before{
+  border-left: 2rpx solid #ffac6e;
+}
+.ysybd{
+  border-top:2rpx solid #ffcaa2;
+  border-bottom:2rpx solid #ffcaa2;
+}
+.ysyborder>view{
+  border-right: 2rpx solid #ffcaa2;
+}
+.ysybg{
+  background: #ffcaa2;
+  padding:0 73rpx;
+  padding-top:44rpx;
+}
+/* 已失效 */
+.ysxtext{
+  color:#999;
+}
+.ysxtext::before{
+  border-left: 2rpx solid #ccc;
+}
+.tsxborder{
+  border-top:2rpx solid #ccc;
+  border-bottom:2rpx solid #ccc;
+}
+.yuanborder>view{
+  border-right: 2rpx solid #ccc;
+}
+.ysxbg{
+  background: #ccc;
+  padding:0 73rpx;
+  padding-top:44rpx;
+}
+
+
+
+.s1{
+  top:-152rpx;
+  left:102rpx;
+}
+.T{
+  padding-top:0;
+}

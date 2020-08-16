@@ -1,0 +1,47 @@
+.head {
+  width: 100%;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-color: #a2c340;
+  background-position: center bottom;
+  padding: 30px 15px 40px;
+  display: flex;
+  color: #fff;
+  align-items: center;
+  justify-content: space-between;
+}
+
+list.menu.card-menu {
+  margin: -20px 10px 10px;
+}
+
+.ucNav [class*="img-icon"] {
+  width:50px;
+  height:42px;
+  background-size:40px 40px;
+  position:relative;
+  background-position:center center;
+  background-repeat:no-repeat;
+  margin:0 auto 5px;
+
+}
+.ucNav list.grid > item{
+  padding: 0;
+}
+.ucMenu .content {
+  display: flex;
+  align-items: center;
+  height:50px;
+}
+
+.ucMenu image {
+  width: 22px;
+  height: 22px;
+  margin-right: 10px;
+}
+canvas{
+  width: 200px;
+  height: 200px;
+  margin: auto;
+  display: block;
+}

@@ -1,0 +1,79 @@
+<!--pages/gwcchilds/xiangqing/xiangqing.wxml-->
+<view class='body'>
+<view class='head' wx:if="{{detail.is_state == 1}}">
+  <image src='/images/xiang.png' class='png'></image>
+  <view>等待卖家付款</view>
+  <view>剩余{{downTime.hours}}小时{{downTime.minutes}}分钟{{downTime.seconds}}秒交易自动关闭</view>
+</view>
+
+
+<view class="site" bindtap='goSite' wx:if="{{siteRess.name}}">
+  <view class="site-bg img-dizhi"></view>
+  <view class="site-value">
+    <view class="site-name">{{siteRess.name}} <view class="site-mobile">{{siteRess.mobile}}</view></view>
+    <view class="site-address">{{siteRess.city}}-{{siteRess.address}} </view>
+  </view>
+</view>
+
+  <view class='list'>
+    <view class='list-head'>商品列表</view>
+
+
+    <block wx:for="{{detail.goods}}">
+      <view class='list-content'>
+        <image src='{{item.goods_logo}}' class='png'></image>
+        <view class='list-right'>
+          {{item.goods_name}}
+          <view>
+            ￥{{item.goods_price}}
+            <view>x {{item.goods_number}}</view>
+          </view>
+        </view>
+      </view>
+    </block> 
+
+    <view class='list-foottext'>
+        <view>共{{detail.total_number}}件商品 快递费￥ {{detail.freight_price}} 元</view>
+        <view>总价：￥<text>{{detail.total_price}}</text>元 优惠￥<text>{{detail.couprice}}</text></view>
+    </view>
+  </view>
+
+
+<view class='zfxx-head'>
+  <view>支付信息</view>
+  {{detail.paytype}}
+</view>
+<view class='zfxx-content'>
+  <view>下单编号：{{detail.order_id}}</view>
+  <view>创建时间：{{detail.create_time}}</view>
+</view>
+<view class='beizu'>备注</view>
+<view class='liouyan'>
+  <textarea placeholder='有需要请备注留言'></textarea>
+</view>
+
+<view class='footerbg'></view>
+
+
+<view class='config_pay'>
+  <view class="b">合计：<view>￥{{detail.total_price}}元</view> </view>
+  <view class='config_pay_btn'>
+    <view class="paying_left_btn huise" wx:if="{{detail.is_state == 1}}" bindtap='clearOrder'>取消订单</view>
+    <view class="paying_left_btn orange" wx:if="{{detail.is_state == 1}}" bindtap='payorder'>提交订单</view>
+    <view class="paying_left_btn orange" wx:if="{{detail.is_state == 3}}" bindtap='succeOrder'>确定收货</view>
+  </view>
+</view>
+
+<!-- <view class='footer'>
+  <view>合计：<text>￥{{detail.total_price}}元</text></view>
+
+  <view class="footer-on">
+    <view class="f-left">取消订单</view>
+    <view class="f-right">提交订单</view>
+  </view>
+  
+</view> -->
+
+
+
+</view>

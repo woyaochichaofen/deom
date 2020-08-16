@@ -1,0 +1,32 @@
+<bar class="search fixed" style="box-shadow:none;">
+  <view class='serach-form round'>
+    <text class="icon-search"></text>
+    <input type="text" name="input" placeholder="请输入商品名称进行搜索" value="{{keyword}}" bindinput="editKeyword" confirm-type="search" />
+  </view>
+</bar>
+<view class="ShaiXuan fixed">
+  <view class="{{curIndex == 1 ? 'btn' : ''}}" data-index="1" bindtap="RightHidden">默认{{index}}</view>
+  <view class="{{curIndex == 2 ? 'btn' : ''}}" data-index="2" bindtap="RightHidden">人气</view>
+  <view class="{{curIndex == 3 ? 'btn' : ''}}" data-index="3" bindtap="RightHidden">销量</view>
+  <view class="{{curIndex == 4 ? 'btn' : ''}}" data-index="4" bindtap="RightHidden">
+    价格
+    <view class="Jiaimage" bindtap="jiaimg">
+      <image src="{{Jiaimage == 2 ? '/images/TopColor.png' : '/images/Top.png'}}" class='png'></image>
+      <image src="{{Jiaimage == 1 ? '/images/FootColor.png' : '/images/Foot.png'}}" class='png'></image>
+    </view> 
+  </view>
+</view>
+
+<!--pages/goods/list.wxml-->
+<view class="foot">
+  <block wx:for="{{goodsList}}">
+    <view bindtap="goGoods" data-id="{{item.goods_id}}">
+        <image src="{{item.goods_logo}}"></image>
+        <text>{{item.goods_name}}</text>
+        <text>{{item.goods_price}}</text>
+        <text>{{item.market_price}}</text>
+    </view>
+  </block>
+</view>
+
+<view id="pageData" wx:if="{{pageData}}">- 我是有底线的 -</view>

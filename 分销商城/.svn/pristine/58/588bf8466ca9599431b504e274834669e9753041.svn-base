@@ -1,0 +1,97 @@
+<view class='dingdan-body'>
+<!-- 头部点击 -->
+<view class='topTabSwiper'>
+    <view class='tab  {{currentData == 0 ? "tabBorer" : ""}}'  data-current = "0" bindtap='checkCurrent'>未使用</view>
+    <view class='tab  {{currentData == 1 ? "tabBorer" : ""}}'  data-current = "1" bindtap='checkCurrent'>已使用</view>
+    <view class='tab  {{currentData == 2 ? "tabBorer" : ""}}'  data-current = "2" bindtap='checkCurrent'>已失效</view>
+</view>
+<swiper current="{{currentData}}" class='swiper' duration="300" bindchange="bindchange">
+  <swiper-item>
+      <view class='swiper_con'>
+      <view class='wsy-yhj'>
+        <block wx:for="{{usable}}"> 
+          <view class='wsy-list' bindtap='goBack' data-id="{{item.id}}" data-index="{{index}}">
+            <view class='wsy-right'>
+              <view class='wsy-right-text'>立即使用</view>
+              <view class='yuan yuan1'>
+                <view wx:for="{{6}}"></view>
+              </view>
+            </view>
+            <view class='wsy-left'>
+              <view class='yuan yuan2'>
+                <view wx:for="{{6}}"></view>
+              </view>
+              <view class='wsycenter'>
+                <view class='wsytext1'>
+                  <text>{{item.money}}</text>元
+                </view>
+                <view class='wsytext2'>{{item.name}}</view>
+                <view class='wsytext3'>有效期{{item.start_time}} - {{item.end_time}}</view>
+              </view>
+            </view>
+          </view>
+        </block>
+      </view>
+      <view class='dingdan-suoju' wx:if="{{usable.length <= 0}}">暂无未使用的平台优惠卷</view>
+    </view>
+  </swiper-item> 
+
+
+  <swiper-item>
+      <view class='swiper_con'>
+      <view class='wsy-yhj'>
+        <view class='wsy-list ysybd' wx:for="{{disabled}}">
+          <view class='wsy-right ysybg'>
+            <view class='wsy-right-text T'>已使用</view>
+            <view class='yuan s1 yuan1'>
+              <view wx:for="{{6}}"></view>
+            </view>
+          </view>
+          <view class='wsy-left'>
+            <view class='yuan yuan2  ysyborder'>
+              <view wx:for="{{6}}"></view>
+            </view>
+            <view class='wsycenter ysytext'>
+              <view class='wsytext1'>
+                <text>{{item.money}}</text>元优惠卷
+              </view>
+              <view class='wsytext2'>{{item.name}}</view>
+              <view class='wsytext3'>有效期{{item.start_time}} - {{item.end_time}}</view>
+            </view>
+          </view>
+        </view>
+      </view>
+      <view class='dingdan-suoju' wx:if="{{disabled.length <= 0}}">暂无已使用的平台优惠卷</view>
+    </view>
+  </swiper-item> 
+
+
+  <swiper-item>
+      <view class='swiper_con'>
+      <view class='wsy-yhj'>
+        <view class='wsy-list tsxborder' wx:for="{{efficacy}}">
+          <view class='wsy-right ysxbg'>
+            <view class='wsy-right-text T'>已失效</view>
+            <view class='yuan s1 yuan1'>
+              <view wx:for="{{6}}"></view>
+            </view>
+          </view>
+          <view class='wsy-left'>
+            <view class='yuan yuan2 yuanborder'>
+              <view wx:for="{{6}}" wx:key="{{index}}"></view>
+            </view>
+            <view class='wsycenter ysxtext'>
+              <view class='wsytext1'>
+                <text>{{item.money}}</text>元优惠卷
+              </view>
+              <view class='wsytext2'>{{item.name}}</view>
+              <view class='wsytext3'>有效期{{item.start_time}} - {{item.end_time}}</view>
+            </view>
+          </view>
+        </view>
+      </view>
+      <view class='dingdan-suoju' wx:id="{{efficacy.length <= 0 }}">暂无未过期的平台优惠卷</view>
+    </view>
+  </swiper-item> 
+</swiper>
+</view>

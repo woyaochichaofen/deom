@@ -1,0 +1,101 @@
+<!-- 当前地址 -->
+<view class="dizhib img-dizhib"></view>
+<view class="site img-next" bindtap='goSite' wx:if="{{siteRess.name}}">
+  <view class="site-bg img-dizhi"></view>
+  <view class="site-value">
+    <view class="site-name">{{siteRess.name}} <view class="site-mobile">{{siteRess.mobile}}</view></view>
+    <view class="site-address">{{siteRess.city}}-{{siteRess.address}} </view>
+  </view>
+</view>
+<view class="site img-next" bindtap='goSite' wx:else>
+  <view class="site-bg img-dizhiw"></view>
+  <view class="site-value">
+    <view class="site-no">收货地址未填写，前往填写</view>
+  </view>
+</view>
+<view class="dizhib img-dizhib"></view>
+
+<view class="goods">
+  <view class='goods-list-li' wx:for="{{goodsList}}">
+    <view class="goods_details">
+      <image src='{{item.goods_image}}' class="goods-img"></image>
+      <view class="goods_details_t">{{item.goods_name}}</view>
+      <view class="goods_details_m">￥ {{item.goods_price}}</view>
+      <view class="goods_details_s">x {{item.goods_number}}</view>
+      <view class="goods_details_h">{{item.goods_spec}}</view>
+    </view>
+  </view>
+</view>
+
+<view class="payment">
+  <view class="title">支付方式</view>
+  <view class="payment-list">
+    <view class="payment-list-li {{wxHover}}" bindtap='payWx'>
+      <view class="payment-list-li-a">
+        <view class="payment-list-li-img img-wx"></view>
+        <view class="payment-list-li-t">微信支付</view>
+        <view class="gou"></view>
+      </view>
+    </view>
+    <view class="payment-list-li {{moneyHover}}" bindtap='payMoney'>
+      <view class="payment-list-li-a">
+        <view class="payment-list-li-img img-mo"></view>
+        <view class="payment-list-li-t">余额支付 <view class="money">可用余额:{{wallet.point}}</view></view>
+        <view class="gou"></view>
+      </view>
+    </view>
+    <view class="payment-list-li {{integralHover}}" bindtap='payIntegral' data-hover="{{integralHover}}">
+      <view class="payment-list-li-a">
+        <view class="payment-list-li-img img-moy"></view>
+        <view class="payment-list-li-t">金币支付 <view class="money">可用金币:{{wallet.money}}</view></view>
+        <view class="gou"></view>
+      </view>
+    </view>
+  </view>
+</view>
+
+
+<view class="title">备注</view>
+<view class="message">
+  <input type="text" placeholder="客户留言" value="" bindinput='InputValue'/>
+</view>
+
+
+<view class="cofirm">
+  <text>合计：</text>
+  <text>￥{{totalPrice}}元</text>
+  <text>含运费</text>
+  <text>￥{{goodsfreight}}元</text>
+  <view bindtap="ordeConfirm">提交订单</view>
+</view>
+
+<view class="wrap-box" style='display:{{addClass}}' bindtap='payInitBack'></view>
+<view class="wrap-show {{hover}}">
+  <view class="pay-container">
+    <view class="pay-title">
+        <view class="pay-title-remove" bindtap='payInitBack'>×</view>
+        输入支付密码
+    </view>
+    <view class="pay-body">
+        <view class="input-container">
+            <block wx:for="{{6}}">
+              <input class="input-item" type="password" readonly value="{{payPass[index]}}" />
+            </block>
+        </view>
+        <view class="key-container">
+            <view class="key-item" data-name="1" bindtap='payInit'>1</view>
+            <view class="key-item" data-name="2" bindtap='payInit'>2</view>
+            <view class="key-item" data-name="3" bindtap='payInit'>3</view>
+            <view class="key-item" data-name="4" bindtap='payInit'>4</view>
+            <view class="key-item" data-name="5" bindtap='payInit'>5</view>
+            <view class="key-item" data-name="6" bindtap='payInit'>6</view>
+            <view class="key-item" data-name="7" bindtap='payInit'>7</view>
+            <view class="key-item" data-name="8" bindtap='payInit'>8</view>
+            <view class="key-item" data-name="9" bindtap='payInit'>9</view>
+            <view class="key-item empty" bindtap='payInitBack'>返回</view>
+            <view class="key-item" data-name="0" bindtap='payInit'>0</view>
+            <view class="key-item remove img-arrDel" bindtap='payInitRemove'></view>
+        </view>
+    </view>
+</view>
+</view>

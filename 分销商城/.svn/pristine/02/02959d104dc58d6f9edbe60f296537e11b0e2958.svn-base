@@ -1,0 +1,12 @@
+/* pages/components/shopitem/shopitem.wxss */
+
+.shop,.ul{
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  margin-top: 20px;
+}
+#pageData{
+  color: #999 !important;
+  line-height: 50px !important;
+}

@@ -1,0 +1,88 @@
+<view class='header'>
+  <view class="wd">我的</view>
+<view class="head img-ucBg">
+  <avatar class="round xl" style="background-image:url({{avatarUrl}});"></avatar>
+  <view class='head-text'>
+    <view class='text-xl margin-bottom-sm'><!-- {{nickName}} --> 明日晴天</view>
+    <view class='headtextbg'>经理</view>
+  </view>
+  <view class='head-btn'>
+    <view>
+      <image src='/images/user/wd5.png' mode='widthFix' class='png head-btn1'></image>
+    </view>
+    <view>
+      <image src='/images/user/wd6.png' mode='widthFix' class='png head-btn2'></image>
+    </view>
+  </view>
+</view>
+
+<list class="menu card-menu shadow-lg ucNav" class="imgbtnlist">
+  <list class="grid no-border" id="imgbtnlist">
+    <item bindtap="toOrder" data-id="1">
+      <view class='img-iconPay'>
+        <image src='/images/user/wd1.png' class='png imgbtn'></image>
+      </view>
+      <text id='imgbtntext'>待付款</text>
+      <view class='number' hidden='{{number1.checked}}'>{{number1.title}}</view>
+    </item>
+    <item bindtap="toOrder" data-id="2">
+      <view class='img-iconPack'>
+        <image src='/images/user/wd2.png' class='png imgbtn imgbtn2'></image>
+      </view>
+      <text id='imgbtntext'>待收货</text>
+      <view class='number' hidden='{{number2.checked}}'>{{number2.title}}</view>
+    </item>
+    <!-- <item bindtap="toOrder" data-id="3">
+      <view class='img-iconSend'></view>
+      <text>已发货</text>
+    </item> -->
+    <item bindtap="toOrder" data-id="3">
+      <view class='img-iconSign'>
+        <image src='/images/user/wd3.png' class='png imgbtn imgbtn3'></image>
+      </view>
+      <text id='imgbtntext'>已完成</text>
+      <view class='number' hidden='{{number3.checked}}'>{{number3.title}}</view>
+    </item>
+    <item bindtap="toOrder" data-id="4">
+      <view class='img-iconDone'>
+        <image src='/images/user/wd4.png' class='png  imgbtn imgbtn4'></image>
+      </view>
+      <text id='imgbtntext'>退货单</text>
+      <view class='number' hidden='{{number4.checked}}'>{{number4.title}}</view>
+    </item>
+  </list>
+</list>
+  <image src='/images/bg.png' class='head-img'></image>
+</view>
+<view class='huiyuan'>
+  <view class='huiyuanimg'>
+    <image src='/images/user/wdbg.png' bindtap='huiyuanimg'></image>
+  </view>
+</view>
+<list class="menu ucMenu">
+  <item class="arrow">
+    <navigator class='content flex-sub' url='/pages/user/wallet' open-type='navigate' hover-class='none'>
+      <image src='/images/user/wd7.png' mode='widthFix' class='png'></image> 我的钱包
+    </navigator>
+  </item>
+  <item class="arrow">
+    <navigator class='content flex-sub' url='/pages/coupon/coupon' open-type='navigate' hover-class='none'>
+      <image src='/images/user/wd8.png' mode='widthFix' class='png'></image> 推广二维码
+    </navigator>
+  </item>
+  <item class="arrow">
+    <navigator class='content flex-sub' url='../join/home' open-type='navigate' hover-class='none'>
+      <image src='/images/user/wd9.png' mode='widthFix' class='png'></image> 我的粉丝
+    </navigator>
+  </item>
+  <!-- <item class="arrow">
+    <navigator class='content flex-sub' url='../manager/home/home' open-type='navigate' hover-class='none'>
+      <image src='/images/user/wd10.png' mode='widthFix' class='png'></image> 优惠卷
+    </navigator>
+  </item> -->
+  <item class="arrow">
+    <navigator class='content flex-sub' url='/pages/address/home' open-type='navigate' hover-class='none'>
+    <image src='/images/user/wd11.png' mode='widthFix' class='png'></image> 收货地址
+    </navigator>
+  </item>
+</list>

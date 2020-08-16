@@ -1,0 +1,13 @@
+<!--pages/user/collect.wxml-->
+<view class="foot">
+  <block wx:for="{{goodsList}}">
+    <view bindtap="goGoods" data-id="{{item.goods_id}}">
+        <image src="{{item.goods_logo}}"></image>
+        <text>{{item.goods_name}}</text>
+        <text>{{item.goods_price}}</text>
+        <text>{{item.market_price}}</text>
+    </view>
+  </block>
+</view>
+
+<view id="pageData" wx:if="{{pageData}}">- 我是有底线的 -</view>

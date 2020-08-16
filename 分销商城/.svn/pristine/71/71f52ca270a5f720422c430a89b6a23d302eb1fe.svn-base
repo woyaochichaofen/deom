@@ -1,0 +1,32 @@
+<!--pages/wallet/presentation.wxml-->
+<view class="Form">
+  <view class="Form-view">
+    <text class="Form-view-text">提现余额</text>
+    <input class="Form-view-input" type="text" placeholder="请输入提现的金额" bindinput='InputMoney'></input>
+  </view>
+  <view class="Form-view">
+    <text class="Form-view-text">支付密码</text>
+    <input class="Form-view-input" password='true'  placeholder="请输入6位数数字" maxlength='6' bindinput='InputPass'></input>
+  </view>
+  <view class="Form-view">
+    <text class="Form-view-text">手机账号</text>
+    <input class="Form-view-input" placeholder="请输入手机号" disabled="true" value="{{detail.mobile}}"></input>
+  </view>
+  <view class="Form-view">
+    <text class="Form-view-text">账户余额</text>
+    <input class="Form-view-input" disabled="true" placeholder-class="balance" value="{{detail.money}}元"></input>
+  </view>
+</view>
+
+<view class="Button" bindtap='cofirm'>提交申请</view>
+
+<!-- 特别说明 -->
+<!-- <view class="Explain">
+  <view></view>
+  <view></view>
+  特别说明
+</view> -->
+<!-- 特别说明内容 -->
+<!-- <view class="Explain-content">
+<text>1.提现需扣去1%的提现手续费\n</text>
+</view> -->

@@ -1,0 +1,35 @@
+<!--pages/wallet/wallet.wxml-->
+<view class="Top">
+  <view class="Top-view" bindtap="myTypeWatch" data-id="1">
+    <text class="Top-view-text">我的余额</text>
+    <text class="Top-view-text-1">\n￥{{wallet.money}}</text>
+  </view>
+  <view class="Top-view" bindtap="myTypeWatch" data-id="2">
+    <text class="Top-view-text">我的积分</text>
+    <text class="Top-view-text-2">\n￥{{wallet.point}}</text>
+  </view>
+  <view class="Top-Presentation" bindtap="gopresentation">余额提现</view>
+</view>
+
+
+
+ <view class="Foot">
+  <block wx:for="{{list}}">
+    <view class="balance">
+      <view class="balance-image img-jilu"></view>
+      <view class="balance-value">
+        <view class="balance-text" wx:if="{{type == 1}}">{{item.remark}}[{{item.money}}]</view>
+        <view class="balance-text" wx:if="{{type == 2}}">{{item.remark}}[{{item.point}}]</view>
+        <view class="balance-time">{{item.create_time}}</view>
+      </view>
+    </view>
+  </block>
+  <view id="pageData" wx:if="{{pageData}}">- 暂无更多数据 -</view>
+ </view>
+
+ <!-- <view class="Foot" hidden="{{changeindex == 1 ? true : false}}">
+  <view class="balance" wx:for="{{12}}">
+    <image class="balance-image" src="/images/wallet.png"></image>
+    <text class="balance-text">积分管理员后台修改[-182.00]<text class="balance-text-text">\n2019-07-15 15：12：15</text></text>
+  </view>
+ </view> -->

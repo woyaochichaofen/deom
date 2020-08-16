@@ -1,0 +1,24 @@
+<!--pages/wallet/presentation.wxml-->
+<form bindsubmit="formSubmit">
+<view class="Form">
+  <view class="Form-view">
+    <!-- <text class="Form-view-text icon-search"></text> -->
+    <image class="Form-view-image" src="/images/b1.png"></image>
+    <input class="Form-view-input" type="text" placeholder="{{mobile}}" placeholder-class="balance" disabled="true"></input>
+  </view>
+  <view class="Form-view">
+    <!-- <text class="Form-view-text icon-search"></text> -->
+    <image class="Form-view-image" src="/images/b2.png"></image>
+    <input class="Form-view-input" placeholder="验证码" bindblur="code" value="{{code1}}" type="number"></input>
+    <view class="{{codeClass}}" bindtap="codeAjax">{{countDownNum}}</view>
+  </view>
+  <view class="Form-view">
+    <!-- <text class="Form-view-text icon-search"></text> -->
+    <image class="Form-view-image" src="/images/b3.png"></image>
+    <input class="Form-view-input" placeholder="请输入六位数支付密码" type="password" bindblur="password" value="{{password1}}"></input>
+  </view>
+</view>
+
+<view class="Buttonw" bindtap="submita">提交申请</view>
+
+</form>

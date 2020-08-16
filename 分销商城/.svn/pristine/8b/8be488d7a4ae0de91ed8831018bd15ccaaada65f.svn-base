@@ -1,0 +1,48 @@
+<bar class="flex search">
+  <navigator class='serach-form round' url='/pages/search/search' hover-class='none'>
+    <text class="icon-search"></text>
+    <text>大家都在搜夏季新品</text>
+  </navigator>
+</bar>
+
+<view class="box">
+  <view class="Bleft">
+    <scroll-view scroll-y scroll-with-animation scroll-top="{{navTop}}">
+      <block wx:for="{{goodType}}">
+        <!-- <view class="{{LeftTxt ? 'BleftView' : ''}}" wx:for="{{leftShuju}}" data-index="{{index}}" bindtap="RightHidden"> -->
+        <view class="type {{curIndex == index ? 'BleftView' : ''}}" data-index="{{index}}" data-id="{{item.id}}" bindtap="RightHidden">
+         <text>{{item.name}}</text>
+        </view>
+      </block>
+    </scroll-view>
+  </view>
+
+  <view class="Bright">
+
+    <view class="content" wx:if="{{goodList.length > 0}}">
+      <block wx:for="{{goodList}}">
+        <view bindtap="goGoods" data-id="{{item.id}}">
+          <!-- {{item.logo}} -->
+          <image src="{{item.logo}}"></image>
+          <text>{{item.name}}</text>
+        </view>
+      </block> 
+    </view>
+    <view class="nodata_text" wx:else>该分类暂无数据</view>
+
+    <!-- <block wx:for="{{goodType}}">
+      <image src="{{item.logo}}"  hidden="{{curNav == index ? '' : 'true'}}"></image>
+      <view hidden="{{curNav == index ? '' : 'true'}}" class="BrightTXT">{{item.name}}</view>
+    </block>
+
+    <view class="content" wx:for="{{goodType[curNav].child}}">
+      <view bindtap="goto" data-index="{{index}}">
+        <image src="{{item.logo}}"></image>
+        <text>{{item.name}}</text>
+      </view>
+    </view> -->
+
+  
+  
+  </view>
+</view>

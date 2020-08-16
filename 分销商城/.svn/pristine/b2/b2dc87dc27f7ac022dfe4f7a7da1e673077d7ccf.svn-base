@@ -1,0 +1,57 @@
+
+<!------------ 优惠卷-------------- -->
+<view class="gwc_body">
+  <!-- <view class='yhj' wx:if="{{yhj}}">
+    你有一张优惠卷
+    <view   bindtap='remove'>
+       <image src='/image/cw.png'></image>
+    </view>
+  </view> -->
+
+
+<!-----------加入购物车的商品------------>
+<view class='rowdiv'>
+  <view class='row' wx:for="{{carts}}"  data-index="{{index}}" data-goodList="{{carts}}" bindlongpress='deleteList'>
+    <view class='btn'>
+      <icon type="success" size="20" color="{{item.color}}"  bindtap='bgbtn' data-color="{{item.color}}" data-index="{{index}}" data-goodList="{{rowarr}}"/>
+    </view>
+    <view class='text'>
+      <view class='img text-view'>
+        <image class="row-image" src='{{item.goods_logo}}'></image>
+      </view>
+      <view class='text1 text-view'>
+        {{item.goods_name}}
+      </view>
+      <view class='text2 text-view'>{{item.spec_value}}</view>
+      <view class='text3 text-view'>￥{{item.goods_price}}</view>
+      <view class='btn_j text-view'>
+        <view class='ja btn_j-view' bindtap="jian"  data-index="{{index}}" data-goodList="{{carts}}">-</view>
+        <view class='jan btn_j-view'>{{item.goods_number}}</view>
+        <view class='ja btn_j-view' bindtap='jia'  data-index="{{index}}" data-goodList="{{carts}}">+</view>
+      </view>
+    </view>
+  </view>
+</view>
+
+<!---------- 推荐--------->
+<!-- <caiLike caiLike="{{caiLike}}"/> -->
+<!---------- 去结算----------- -->
+
+  <view class='footer'>
+    <view class='foot2 foot1-view-2'>
+      <!-- <view class='footer2' bindtap="{{goshop=='#000'? 'dindan' : ''}}"> -->
+      <view class='footer2' style="background:{{btnGo}};color:{{btnGo == '#999' ? 'white' : ''}}" bindtap="dindan">
+        去结算(<view class='footer3'>{{jishu}}</view>)
+      </view>
+      <view class='footer1'>￥{{totalPrice}}</view>
+    </view>
+    <view class='foot1'>
+      <view class="foot1-view-1">全选</view>
+      <view>
+        <icon type="success" size="20" color="{{btnHover}}" data-color="{{btnHover}}" bindtap='selectAll' data-id="2"/>
+      </view>
+    </view>
+  </view>
+</view>
+
+<view class='dibu'></view>

@@ -1,0 +1,111 @@
+<!--pages/cart/home.wxml-->
+<!-- <text>pages/cart/home.wxml</text>/n
+<shopitem bind:myevent="onMyEvent" data-id="1"/> -->
+<bar class="flex search">
+  <navigator class='serach-form round' url='/pages/search/search' hover-class='none'>
+    <text class="icon-search"></text>
+    <text>搜索热门商品</text>
+  </navigator>
+</bar>
+
+<!-- <swiper class="banner" autoplay="false" interval="5000" duration="500" indicator-dots="true" indicator-active-color="#a2c340" circular="true" style='height:{{Hei}}'>
+      <block wx:for="{{bannerList}}">
+        <swiper-item>
+            <image src="{{item.logo}}" class="slide-image" mode="widthFix" bindload='imgH' data-id="{{item.url}}" bindtap='goGoods'/>
+        </swiper-item>
+      </block>
+</swiper> -->
+
+<!-- <shopitem id="goodsList"/> -->
+
+<!-- 新人福利 -->
+<view class="box">
+  <image class="box-image" src="/images/home/biaoti1.png"></image>
+  <view class="box-view">
+    <!-- <view class="Newwcomer" wx:for="{{newList}}">
+      {{item.type_name}}
+      <text class="Newwcomer-text">{{item.goods_price}}</text>
+      <image class="Newwcomer-image" src="{{item.goods_logo}}"/>
+    </view> -->
+    <block wx:for="{{newList}}">
+      <view class="Newwcomer">
+        {{item.goods_name}}
+        <text class="Newwcomer-text" wx:if="{{item.type_des}}">{{item.type_des}}</text>
+        <image class="Newwcomer-image" src="{{item.goods_logo}}"/>
+      </view>
+    </block>
+    
+  </view>
+</view>
+
+<!-- 爆款专区 -->
+<view class="box">
+  <image class="box-image" src="/images/home/biaoti2.png"></image>
+  <view class="box-view">
+    <block wx:for="{{burstList}}">
+      <view class="Explosives" >
+        <image class="Explosives-image" src="{{item.goods_logo}}"/>
+        <text class="Explosives-text-1">{{item.goods_name}}</text>
+        <text class="Explosives-text-2">￥{{item.goods_price}}</text>
+        <text class="Explosives-text-4">\n￥{{item.market_price}}</text>
+      </view>
+    </block>
+  </view>
+</view>
+
+<!-- 每日专享 -->
+<view class="box">
+  <image class="box-image" src="/images/home/biaoti3.png"></image>
+  <!-- <block wx:for="{{burstList}}">
+    
+  </block> -->
+  <view class="box-view">
+    <view>
+      <image class="everDay-image-left png" src="/images/wl.png" bindtap="everDayLeft"></image>
+      <image class="everDay-image-right png" src="/images/w.png" bindtap="everDayRight"></image>
+    </view>
+    
+    <scroll-view class="everDay" scroll-x="true" scroll-into-view="{{toView}}" bindscroll="scroll" scroll-with-animation='true' circular="true">
+      <block wx:for="{{dayList}}">
+        <view class="everDay-view">
+          <image class="everDay-view-image" src="{{item.goods_logo}}"></image>
+          <text class="everDay-view-text-1">{{item.goods_name}}</text>
+          <text class="everDay-view-text-2">￥{{item.goods_price}}</text>
+          <text class="everDay-view-text-3">￥{{item.market_price}}</text>
+        </view>
+      </block>
+    </scroll-view>  
+
+  </view>
+</view>
+
+<!-- 精选商品 -->
+<view class="box">
+  <image class="box-image" src="/images/home/biaoti4.png"></image>
+
+  <view class="box-view">
+    <view class="Selected" wx:for="{{siftList}}">
+      <image class="Selected-image" src="{{item.goods_logo}}"></image>
+      <view class="Selected-view">
+        <text class="Selected-view-text">{{item.goods_name}}</text>
+      </view>
+    </view>
+  </view>
+</view>
+
+<view class="foot">
+  <block wx:for="{{goodsList}}">
+    <view bindtap="goGoods" data-id="{{item.goods_id}}">
+        <image src="{{item.goods_logo}}"></image>
+        <text>{{item.goods_name}}</text>
+        <text>{{item.goods_price}}</text>
+        <text>{{item.market_price}}</text>
+    </view>
+  </block>
+</view>
+
+<view id="pageData" wx:if="{{pageData}}">- 我是有底线的 -</view>
+
+ <!-- <caiLike caiLike="{{caiLike}}" bind:myevent="onMyEvent"/> -->
+
+

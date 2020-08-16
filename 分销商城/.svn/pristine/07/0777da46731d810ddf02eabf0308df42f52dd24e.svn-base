@@ -1,0 +1,29 @@
+<!--pages/wallet/wallet.wxml-->
+<view class="Top">
+  <view class="Top-view" bindtap="myTypeWatch" data-index="1">
+    <text class="Top-view-text">我的余额</text>
+    <text class="Top-view-text-1">\n￥{{wallet.money}}</text>
+  </view>
+  <view class="Top-view" bindtap="myTypeWatch" data-index="2">
+    <text class="Top-view-text">我的积分</text>
+    <text class="Top-view-text-2">\n￥{{wallet.point}}</text>
+  </view>
+  <view class="Top-Presentation" bindtap="gopresentation">余额提现</view>
+</view>
+
+
+
+ <view class="Foot">
+  <view class="balance" wx:for="{{list}}">
+    <image class="balance-image" src="/images/wallet.png"></image>
+    <text class="balance-text">余额管理员后台修改[-182.00]<text class="balance-text-text">\n2019-07-15 15：12：15</text></text>
+  </view>
+  <view></view>
+ </view>
+
+ <!-- <view class="Foot" hidden="{{changeindex == 1 ? true : false}}">
+  <view class="balance" wx:for="{{12}}">
+    <image class="balance-image" src="/images/wallet.png"></image>
+    <text class="balance-text">积分管理员后台修改[-182.00]<text class="balance-text-text">\n2019-07-15 15：12：15</text></text>
+  </view>
+ </view> -->

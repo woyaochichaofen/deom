@@ -1,0 +1,4 @@
+<!--pages/home/home.wxml-->
+<text>pages/home/home.wxml</text>
+
+<navigator url='/pages/share/home' open-type="navigate">1</navigator>

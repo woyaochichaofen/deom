@@ -1,0 +1,30 @@
+<bar class="search fixed">
+  <view class='serach-form round'>
+    <text class="icon-search"></text>
+    <input type="text" name="input" placeholder="请输入商品名称进行搜索" value="{{keyword}}" bindconfirm="onKeyword" confirm-type="search" bindinput="inputChange" />
+  </view>
+  <view class='action'>
+    <button class='color' bindtap='onKeyword'>搜索</button>
+  </view>
+</bar>
+
+<!-- 热门搜索 -->
+<view class="Hot" wx:if ="{{Hot.success}}">
+  <text>热门搜索</text>
+  <view class="HotFlex">
+    <view wx:for="{{Hot.list}}" bindtap="fenleiX" data-index="{{index}}">{{Hot.list[index].value}}</view>
+  </view>
+</view>
+
+<view class="foot">
+  <block wx:for="{{goodsList}}">
+    <view bindtap="goGoods" data-id="{{item.goods_id}}">
+        <image src="{{item.goods_logo}}"></image>
+        <text>{{item.goods_name}}</text>
+        <text>{{item.goods_price}}</text>
+        <text>{{item.market_price}}</text>
+    </view>
+  </block>
+</view>
+
+<view id="pageData" wx:if="{{pageData}}">- 我是有底线的 -</view>

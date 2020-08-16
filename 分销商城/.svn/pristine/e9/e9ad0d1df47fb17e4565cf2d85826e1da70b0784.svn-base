@@ -1,0 +1,3 @@
+<!--pages/cart/home.wxml-->
+<text>pages/cart/home.wxml</text>/n
+<shopitem bind:myevent="onMyEvent" data-id="1"/>

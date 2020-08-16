@@ -1,0 +1,23 @@
+<!--pages/vip/myfans.wxml-->
+<view id="you">
+  <view class="people">总人数：<view class="num">{{count}}</view>人</view>
+</view>
+
+
+ <view class="Foot">
+  <block wx:for="{{list}}">
+    <view class="balance">
+      <!-- <image class="balance-image" src='{{item.userface}}'></image> -->
+      <!-- <view class="balance-value">
+        <view class="balance-text">{{item.remark}}</view>
+        <view class="balance-time">{{item.create_time}}</view>
+      </view> -->
+      <image class="balance-image" src='{{item.userface}}'></image>
+      <view class="balance-value">
+        <view class="balance-text">{{item.nickname}}<view class="name">{{item.level_name}}</view></view>
+        <view class="balance-time">手机号：{{item.mobile}}</view>
+      </view>
+    </view>
+  </block>
+  <view id="pageData" wx:if="{{pageData}}">- 暂无更多数据 -</view>
+ </view>

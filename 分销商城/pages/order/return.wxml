@@ -1,0 +1,28 @@
+<view class='tuihuo-body'>
+  <block>
+  <view class='qblist' wx:for="{{orderList}}" bindtap='returnDetail'>
+      <view class='qbhead'>
+        <view></view>
+        <view>
+          <text>订单号：</text>
+          <text>{{item.order_id}}</text>
+        </view>
+      </view>
+      <view class='qbbrand'>
+        <view class='qbimg'></view>
+        <view class='qbtext'>
+          <view>{{item.goods[0].goods_name}}</view>
+          <view>x {{item.goods[0].goods_number}}</view>
+          <view>￥ {{item.goods[0].goods_price}}</view>
+        </view>
+      </view>
+      <view class='qbfoottext'>共{{item.goods.length}}件商品 合计：￥{{item.payprice}}(含运费￥{{item.freight_price}})</view>
+      <!-- <view class='qbbtn'>
+        <view id='qbmoren'>退货</view>
+      </view> -->
+    </view>
+  </block>
+    
+  <!-- <view class="tuihuo-zw">暂无相关的退货定单</view> -->
+</view>
+<view id="pageData" wx:if='{{goodsNull == true}}'> - 暂无更多订单 - </view>

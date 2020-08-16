@@ -1,0 +1,17 @@
+.box {
+  background: #fff;
+  padding: 30px;
+  margin: 15px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+list.menu.card-menu {
+  margin: 5px 15px;
+}
+.foot{
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+}

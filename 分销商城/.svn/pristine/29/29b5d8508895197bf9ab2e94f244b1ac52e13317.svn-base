@@ -1,0 +1,110 @@
+<import src="../../wxParse/wxParse.wxml"/>
+<!-- 商品大图轮播 -->
+<view class="banner">
+  <swiper autoplay="false" interval="5000" duration="500" indicator-dots="true" indicator-active-color="#a2c340" circular="true" style='height:{{Hei}}'>
+      <block wx:for="{{detail.goods_image}}">
+        <swiper-item>
+            <image src="{{item}}" class="slide-image" mode="widthFix" bindload='imgH' bindtap="previewImage" data-index="{{index}}" data-src="{{item}}"/> 
+        </swiper-item>
+      </block>
+  </swiper>
+</view>
+
+<view class='goods_parameter'>
+  <view class="goods_parameter-title">{{detail.goods_name}}</view>
+  <!-- <view class="goods_parameter-remark"></view> -->
+  <view class="goods_parameter-price">{{detail.goods_price}} <view class="goods_parameter-pr">{{detail.market_price}}</view></view>
+  <view class="goods_parameter-sacle">已售：{{detail.goods_salse}}</view>
+</view>
+
+<view class="goSelect">
+  <view class="goSelect-nav img-next" bindtap='change' data-id="2">
+    <text>选择商品规格</text>
+  </view>
+  <!-- <view class="goSelect-nav img-next">
+    <text>领取优惠券</text>
+  </view> -->
+</view>
+
+<view class="contentBox">
+  <template is="wxParse" data="{{wxParseData:article.nodes}}"/>
+</view>
+
+
+<view class="wrap-box" style='display:{{addClass}}' bindtap='closeClass'></view>
+<view class="wrap-show {{hover}}">
+  <view class="wrap-show-x img-close" bindtap='closeClass'></view>
+  <card class="goods margin-top">
+    <item wx:key bindtap="toGoods">
+      <image src='{{detail.goods_image[0]}}' mode='aspectFill'></image>
+      <view class='content'>
+        <view class='name'>{{detail.goods_name}}</view>
+        <!-- goods_spec 规格参数 -->
+        <view wx:if="{{goods_spec && goods_spec.length > 0}}">
+          <view class='price'>￥{{goods_spec_price}}</view>
+          <view class='sacle'>库存 {{goods_spec_number}} 件</view>
+        </view>
+
+        <view wx:else>
+          <view class='price'>￥{{detail.goods_price}}</view>
+          <view class='sacle'>库存 {{detail.goods_number}} 件</view>
+        </view>
+        
+      </view>
+    </item>
+  </card>
+
+  <!-- 规格 -->
+  <view class="specif">
+    <block wx:for="{{goods_spec}}">
+      <view class="specif-li">
+        <view class="specif-title">{{item.name}}</view>
+        <view class="specif-box">
+          <block wx:for="{{item.list}}">
+            <view class="specif-box-li {{item.hover}}" data-hover="{{item.hover}}" data-prev="{{item.prev}}" data-id="{{item.ind}}" data-index="{{index}}" bindtap='specifAdd'>{{item.value}}</view>
+          </block>
+        </view>
+      </view>
+    </block>
+  </view>
+
+  <view class="shu">
+    <view class="left">
+      <text class="cun spec_unify">购买数量</text>
+    </view>
+    <view class="dian">
+      <view class="stepper" catchtouchmove="preventTouchMove">
+        <!-- 减号 -->
+        <text class="{{minusStatuses[index]}}" data-alpha-beta="0" bindtap="minus">-</text>
+        <!-- 数值 -->
+        <view class="nownum">{{num}}</view>
+        <!-- 加号 -->
+        <text class="normal" data-alpha-beta="1" bindtap="plus">+</text>
+      </view>
+    </view>
+  </view>
+  
+  <view class="btn bg-yellow" wx:if="{{goSelect == 1}}" bindtap='addCart'>加入购物车</view>
+  <view class="btn bg-red" wx:if="{{goSelect == 2}}" bindtap='confirm'>立即购买</view>
+</view>
+
+
+<bar class="foot shop">
+  <view class="action" bindtap='toService'>
+    <view class="icon-k img-kefu"></view>
+    <!-- <icon class='icon-home text-grey'></icon> -->
+    <text class="color-r">客服</text>
+  </view>
+  <view class="action {{collotHover}}" bindtap='toCollect'>
+   <view class="icon-k icon-collot"></view>
+    <!-- <icon class='icon-cart text-grey'></icon> -->
+    <text class="color-r">收藏</text>
+  </view>
+
+  <view class='bg-yellow submit' bindtap='change' data-id="1">
+    加入购物车
+  </view>
+  <view class='bg-red submit' bindtap='change' data-id="2">
+    立即购买
+  </view>
+</bar>

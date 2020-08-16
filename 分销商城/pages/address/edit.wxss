@@ -1,0 +1,30 @@
+.picker_select{
+  width: 100%;
+  height: auto;
+  overflow: hidden
+}
+.title_r{
+  display: inline-block;
+  margin-left: 15px;
+  color:#555;
+}
+
+
+.code_touch{
+  width: 90px;
+  height: auto;
+  overflow: hidden;
+  text-align: center;
+  padding: 6px 0;
+  font-size: 12px;
+  border-radius: 2px;
+  background: #f4a040;
+  border: 1px solid #f4a040;
+  color: #ffffff;
+}
+
+.code_touch.hover{
+  border: 1px solid #333333;
+  background: #ffffff;
+  color: #333333;
+}

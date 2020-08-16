@@ -1,0 +1,108 @@
+{
+	"description": "项目配置文件",
+	"packOptions": {
+		"ignore": []
+	},
+	"setting": {
+		"urlCheck": false,
+		"es6": true,
+		"enhance": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true,
+		"coverView": true,
+		"nodeModules": false,
+		"autoAudits": false,
+		"uglifyFileName": true,
+		"checkInvalidKey": true,
+		"checkSiteMap": true,
+		"uploadWithSourceMap": true,
+		"babelSetting": {
+			"ignore": [],
+			"disablePlugins": [],
+			"outputPath": ""
+		}
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.7.5",
+	"appid": "wx6d77f078dad5fa4d",
+	"projectname": "%E6%B5%B7%E5%B7%9D%E5%B0%9A%E9%80%89",
+	"debugOptions": {
+		"hidedInDevtools": []
+	},
+	"isGameTourist": false,
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": 6,
+			"list": [
+				{
+					"id": -1,
+					"name": "授权登录",
+					"pathName": "pages/auth/auth",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "绑定手机号码",
+					"pathName": "pages/auth/mobile",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "分类",
+					"pathName": "pages/classify/home",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "我的",
+					"pathName": "pages/user/home",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 4,
+					"name": "添加地址",
+					"pathName": "pages/address/edit",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 5,
+					"name": "商品详情",
+					"pathName": "pages/cart/check",
+					"query": "id=1",
+					"scene": null
+				},
+				{
+					"id": 6,
+					"name": "我的",
+					"pathName": "pages/goods/info",
+					"query": "id=1",
+					"scene": null
+				}
+			]
+		}
+	}
+}

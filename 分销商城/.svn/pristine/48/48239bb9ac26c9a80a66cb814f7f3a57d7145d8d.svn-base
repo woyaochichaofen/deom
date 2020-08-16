@@ -1,0 +1,14 @@
+<form>
+  <form-group class="margin-top">
+    <view class='title'>手机号码</view>
+    <input placeholder="请输入手机号码" bindinput='InputPhone'></input>
+  </form-group>
+  <form-group>
+    <view class='title' style='padding-right:30px;'>验证码</view>
+    <input placeholder="请输入验证码" bindinput='InputCode'></input>
+    <view class="code_touch {{hover}}" bindtap="codeAjax">{{countDownNum}}</view>
+  </form-group>
+  <view class='padding'>
+    <button class='bg-orange lg block' bindtap='submit'>确认提交</button>
+  </view>
+</form>

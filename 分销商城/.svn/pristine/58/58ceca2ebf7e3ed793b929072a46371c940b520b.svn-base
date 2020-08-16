@@ -1,0 +1,24 @@
+<view class='tuihuo-body'>
+    <view class='qblist' wx:for="{{[1,1,1,1]}}" bindtap='tuihuo'>
+        <view class='qbhead'>
+          <view></view>
+          <view>
+            <text>订单号：</text>
+            <text>2143978947</text>
+          </view>
+        </view>
+        <view class='qbbrand'>
+          <view class='qbimg'></view>
+          <view class='qbtext'>
+            <view>(宝宝猴系列任意选4包受那个多少啦啊的斯科拉附件快放假)</view>
+            <view>*2</view>
+            <view>￥123</view>
+          </view>
+        </view>
+        <view class='qbfoottext'>共2件商品 ￥890(免运费)</view>
+        <view class='qbbtn'>
+          <view id='qbmoren'>退货</view>
+        </view>
+      </view>
+  <!-- <view class="tuihuo-zw">暂无相关的退货定单</view> -->
+</view>

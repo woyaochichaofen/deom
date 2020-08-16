@@ -1,0 +1,47 @@
+<nav class='nav center fixed'>
+  <item wx:for="{{nav}}" class="{{navCur == index ? 'cur' :''}}" bindtap="navSelect" data-id="{{index}}" wx:key>
+    {{nav[index]}}
+  </item>
+</nav>
+
+
+<view class='swiper_con'>
+  <block wx:for="{{orderList}}">
+    <view class='qblist'>
+        <view class='qbhead' bindtap='toPay' data-id="{{item.order_id}}">
+          <view>{{item.typeText}}</view>
+          <view>
+            <text>订单号：</text>
+            <text>{{item.order_id}}</text>
+          </view>
+        </view>
+        <view class='qbbrand' bindtap='toPay' data-id="{{item.order_id}}">
+          <image src="{{item.goods[0].goods_logo}}" class='qbimg'></image>
+          <view class='qbtext'>
+            <view> {{item.goods[0].goods_name}}</view>
+            <view>x {{item.goods[0].goods_number}}</view>
+            <view>￥{{item.goods[0].goods_price}}</view>
+          </view>
+        </view>
+        <view class='qbfoottext'>共{{item.goods.length}}件商品 合计：￥{{item.payprice}}(含运费￥{{item.freight_price}})</view>
+        <view class='qbbtn' wx:if="{{item.is_state == 1}}">
+          <view bindtap='clearOrder' data-id="{{item.order_id}}">取消订单</view>
+          <view id='qbmoren' bindtap='toPay' data-id="{{item.order_id}}">去付款</view>
+        </view>
+        <view class='qbbtn' wx:if="{{item.is_state == 2}}">
+          <view bindtap='clearOrder' data-id="{{item.order_id}}">取消订单</view>
+          <view bindtap='toPay' data-id="{{item.order_id}}">查看详情</view>
+        </view>
+        <view class='qbbtn' wx:if="{{item.is_state == 3}}">
+          <view bindtap='logisticsOrder' data-id="{{item.order_id}}">查看物流</view>
+          <view bindtap='toPay' data-id="{{item.order_id}}">确认收货</view>
+        </view>
+        <view class='qbbtn' wx:if="{{item.is_state == 7}}">
+          <!-- <view bindtap='logisticsOrder' data-id="{{item.order_id}}">查看物流</view> -->
+          <view id='qbmoren' bindtap='toPay' data-id="{{item.order_id}}">去评价</view>
+        </view>
+    </view>
+  </block>
+
+  <view id="pageData" wx:if='{{goodsNull == true}}'> - 暂无更多订单 - </view>
+</view>

@@ -1,0 +1,94 @@
+.tuihuo-zw{
+  text-align: center;
+  color:#666;
+  /* padding-top:60rpx; */
+}
+.tuihuo-body{
+  background: #f6f6f6;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  /* height:2000rpx; */
+}
+/* 数据样式 */
+
+.qblist{
+  /* padding-bottom:100rpx; */
+  background: #fff;
+  text-align: left;
+  margin-top: 15px;
+
+  /* margin-top:20rpx; */
+}
+.qblist:nth-child(1){
+  margin-top: 0;
+  /* margin-top: -20rpx; */
+}
+.qbhead{
+  padding:35rpx 20rpx;
+}
+.qbhead>view:nth-child(1){
+  float: right;
+  color:#ff7a14;
+}
+.qbbrand{
+  background: #f6f6f6;
+  overflow: hidden;
+  padding:26rpx 20rpx;
+  border-top:2rpx solid rgb(218, 217, 217);
+}
+.qbbrand:nth-child(2){
+  border-top:1rpx solid transparent;
+}
+.qbimg{
+  width:168rpx;
+  height:168rpx;
+  background: pink;
+  float: left;
+  margin-left:30rpx;
+}
+.qbtext{
+  padding-right:30rpx;
+  padding-left: 220rpx;
+}
+.qbtext>view:nth-child(1){
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.qbtext>view:nth-child(2){
+  font-size: 28rpx;
+  color:#777;
+  margin-top:20rpx;
+}
+.qbtext>view:nth-child(3){
+  color:#ff7a14;
+  margin-top:38rpx;
+  font-size: 34rpx;
+}
+.qbfoottext{
+  text-align: right;
+  font-size: 30rpx;
+  padding:16rpx 0;
+  margin:0 20rpx;
+  border-bottom: 2rpx solid rgb(241, 241, 241);
+}
+.qbbtn{
+  float: right;
+  margin-top:24rpx;
+  padding:0 20rpx;
+}
+.qbbtn>view{
+  float: left;
+  border:2rpx solid rgb(206, 204, 204);
+  padding:4rpx 0;
+  width:150rpx;
+  text-align: center;
+}
+.qbbtn>view:nth-child(1){
+  margin-right:20rpx;
+}
+#qbmoren{
+  color:#ff7a14;
+  border:2rpx solid #ff7a14;
+}

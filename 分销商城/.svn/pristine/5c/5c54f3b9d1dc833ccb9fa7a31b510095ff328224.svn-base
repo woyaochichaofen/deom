@@ -1,0 +1,70 @@
+<!-- 当前地址 -->
+<view class="dizhib img-dizhib"></view>
+<view class="site img-next" bindtap='goSite' wx:if="{{siteRess.name}}">
+  <view class="site-bg img-dizhi"></view>
+  <view class="site-value">
+    <view class="site-name">{{siteRess.name}} <view class="site-mobile">{{siteRess.mobile}}</view></view>
+    <view class="site-address">{{siteRess.city}}-{{siteRess.address}} </view>
+  </view>
+</view>
+<view class="site img-next" bindtap='goSite' wx:else>
+  <view class="site-bg img-dizhiw"></view>
+  <view class="site-value">
+    <view class="site-no">收货地址未填写，前往填写</view>
+  </view>
+</view>
+<view class="dizhib img-dizhib"></view>
+
+<view class="goods">
+  <view class='goods-list-li' wx:for="{{3}}">
+    <view class="goods_details">
+      <image src='' class="goods-img"></image>
+      <view class="goods_details_t">123</view>
+      <view class="goods_details_m">￥ 123</view>
+      <view class="goods_details_s">x 123</view>
+      <view class="goods_details_h">123</view>
+    </view>
+  </view>
+</view>
+
+<view class="payment">
+  <view class="title">支付方式</view>
+  <view class="payment-list">
+    <view class="payment-list-li hover" bindtap='payWx'>
+      <view class="payment-list-li-a">
+        <view class="payment-list-li-img img-wx"></view>
+        <view class="payment-list-li-t">微信支付</view>
+        <view class="gou"></view>
+      </view>
+    </view>
+    <view class="payment-list-li" bindtap='payMoney'>
+      <view class="payment-list-li-a">
+        <view class="payment-list-li-img img-mo"></view>
+        <view class="payment-list-li-t">余额支付 <view class="money">可用余额</view></view>
+        <view class="gou"></view>
+      </view>
+    </view>
+    <view class="payment-list-li" bindtap='payIntegral'>
+      <view class="payment-list-li-a">
+        <view class="payment-list-li-img img-moy"></view>
+        <view class="payment-list-li-t">金币支付</view>
+        <view class="gou"></view>
+      </view>
+    </view>
+  </view>
+</view>
+
+
+<view class="title">备注</view>
+<view class="message">
+  <input type="text" placeholder="客户留言" value=""/>
+</view>
+
+
+<view class="cofirm">
+  <text>合计：</text>
+  <text>￥{{priceAll}}元</text>
+  <text>含运费</text>
+  <text>￥0元</text>
+  <view bindtap="btnOrder">提交订单</view>
+</view>

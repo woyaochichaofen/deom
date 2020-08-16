@@ -1,0 +1,40 @@
+// pages/auth/auth.js
+Page({
+
+  /**
+   * 页面的初始数据
+   */
+  data: {
+
+  },
+  /**
+   * 生命周期函数--监听页面加载
+   */
+  onLoad: function (e) {
+    
+  },
+  wxLogin: function (e) {
+    let that = this;
+
+    if (!e.detail.userInfo) {
+      util.showErrorToast('微信登录失败');
+      return;
+    }
+    
+    user.loginByWeixin(e.detail.userInfo).then(res => {
+      if (!wx.getStorageSync('appkey') && !wx.getStorageSync('location')) {
+        util.showErrorToast('微信登录失败');
+        wx.hideToast();
+        return;
+      }
+
+      util.showErrorToast('授权成功');
+    }).catch((err) => {
+      // console.log(err)
+      util.showErrorToast('微信登录失败');
+    });
+
+
+  }
+
+})

@@ -1,0 +1,65 @@
+// components/shopitem/shopitem.js
+const util = require('../../../utils/util');
+const api = require('../../../utils/api');
+
+Component({
+  /**
+   * 组件的属性列表
+   */
+  properties: {
+    /** 当前item数据 */
+    shop: {
+      type: Array,
+      value: [{
+        image: '',
+        title: '标题标题标题标题标题标题标题标题标题标题标题标题标题标题',
+        customer: '赞助商',
+        time: '04月30日13:00',
+        total: 120,
+        id: 1,
+      }]
+    },
+    /** 是否需要左右边距 默认true */
+    padding: {
+      type: Boolean,
+      value: true
+    }
+  },
+
+  /**
+   * 组件的初始数据
+   */
+  data: {
+    goodsList:'',
+  },
+  pageLifetimes: {
+    // 组件所在页面的生命周期函数
+    show: function () { 
+      this.goodsList();
+      console.log('okey')
+    },
+  },
+
+  /**
+   * 组件的方法列表
+   */
+  methods: {
+    /** item 点击 */
+    goodsList(){
+      util.request(api.Goodslist, {}, 'POST').then(res => {
+        console.log(res)
+        if (res.success) {
+          // 设置传参
+          this.setData({
+            goodsList: res.list
+          })
+        } else {
+          wx.showToast({
+            title: res.info,
+          })
+        }
+      })
+    }
+    
+  }
+})

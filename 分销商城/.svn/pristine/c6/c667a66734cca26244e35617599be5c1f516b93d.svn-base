@@ -1,0 +1,193 @@
+@import "icon.wxss";
+@import "images.wxss";
+@import "colorui2.0.wxss";
+form {
+  display: block;
+}
+
+form-group {
+  background: #fff;
+  padding: 0 15px;
+  display: flex;
+  align-items: center;
+  min-height: 50px;
+}
+
+form-group + form-group {
+  border-top: 1rpx solid #eee;
+}
+
+#pageData{
+  text-align: center;
+  color: #999 !important;
+  line-height: 50px !important;
+}
+
+
+form-group .title {
+  text-align: justify;
+  padding-right: 15px;
+  font-size: 15px;
+  position: relative;
+  height: 50px;
+  line-height: 50px;
+  align-self: flex-start;
+}
+
+form-group input {
+  flex: 1;
+  font-size: 15px;
+  color: #555;
+}
+
+form-group icon[class*="icon-"] {
+  font-size: 18px;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+form-group textarea {
+  flex: 1;
+  margin: 17px 0;
+  height: 50px;
+  font-size:15px;
+}
+
+card.goods {
+  display: block;
+}
+
+card.goods item {
+  background: #fff;
+  display: flex;
+  padding: 15px;
+  border-bottom: 1px solid #eee;
+}
+
+card.goods item > image {
+  width: 100px;
+  height: 100px;
+}
+
+card.goods item > .content {
+  flex: 1;
+  padding-left: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+card.goods item > .content .name {
+  font-size: 16px;
+  line-height: 22px;
+  margin: 0 0 auto;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+
+card.goods item > .content .time {
+  position: relative;
+  bottom: -5px;
+}
+
+card.goods item > .content .time tag {
+  font-size: 12px;
+  padding: 2px 5px;
+  border-radius: 3px;
+  margin: 0 2px;
+}
+
+card.goods item > .content .price text:first-child {
+  font-size: 20px;
+  color: #e13737;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+card.goods item > .content .price text.text-del {
+  color: #888;
+}
+
+.rich-text .p {
+  margin: 0 !important;
+  font-size: 15px;
+}
+
+.rich-text .img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 0 !important;
+}
+
+card.goods.sign item > image {
+  width: 80px;
+  height: 80px;
+  margin-left: 10px;
+}
+
+card.goods.sign item {
+  align-items: center;
+}
+
+bar.cart {
+  padding-right: 0;
+}
+
+bar.cart .submit {
+  width: 120px;
+  height: 50px;
+  line-height: 50px;
+  margin-left: 15px;
+  text-align: center;
+}
+
+card.order {
+  display: block;
+}
+
+card.order item {
+  display: block;
+  background: #fff;
+}
+
+card.order .goods-list {
+  display: flex;
+  padding: 25rpx;
+}
+
+card.order .goods-list image {
+  width: 120rpx;
+  height: 120rpx;
+  margin: 10rpx;
+}
+
+card.order .option {
+  padding: 10px 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+card.order .option .step > item{
+  padding: 0 10px;
+  width: auto;
+  color: #aaa;
+  text-align: center;
+  display: inline-block;
+}
+card.order .option .step > item.done{
+  color: #f7992b;
+}
+card.order .option .step > item icon{
+  font-size: 20px;
+  height: 25px;
+  line-height: 25px;
+}
+card.order .option .step > item text{
+  font-size: 12px;
+  line-height: 20px;
+  display: block;
+}

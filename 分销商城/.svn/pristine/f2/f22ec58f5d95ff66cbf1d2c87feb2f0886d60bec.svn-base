@@ -1,0 +1,24 @@
+<form>
+  <form-group class="margin-top">
+    <view class='title'>手机号码</view>
+    <input placeholder="请输入手机号码" bindinput='InputPhone'></input>
+  </form-group>
+  <form-group>
+    <view class='title' style='padding-right:30px;'>验证码</view>
+    <input placeholder="请输入验证码" bindinput='InputCode'></input>
+    <view class="code_touch {{hover}}" bindtap="codeAjax">{{countDownNum}}</view>
+  </form-group>
+  <view class='padding'>
+    <button class='bg-orange lg block' bindtap='submit'>确认提交</button>
+  </view>
+</form>
+
+<view class="wrap" hidden='{{display}}'></view>
+<view class="wrap-box" hidden='{{display}}'>
+  <view class="wrap-title">温馨提示</view>
+  <view class="wrap-value">使用微信绑定手机号码，极速登录</view>
+  <view class="wrap-btn">
+    <button class="left" bindtap='clearShow'>账号登录</button>
+    <button class="right" open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber">好</button>
+  </view>
+</view>

@@ -1,0 +1,52 @@
+//app.js
+const util = require('./utils/util');
+const api = require('./utils/api');
+
+App({
+  data:{
+    uid:'',
+  },
+  onLaunch: function (e) {
+    console.log(e)
+    // 展示本地存储能力
+    if(e.uid){
+      this.setData({
+        uid: e.u
+      })
+    } 
+    this.getUserInfo();
+  },
+  globalData: {
+    userInfo: '',
+    userlogin: '',
+  },
+  //控制授权登入
+  userlogin: function (page) {
+  },
+  getUserInfo:function(){
+    let that = this;
+    return new Promise(function (resolve, reject) {
+      wx.login({
+        success: function (res) {
+          var code = res.code;  //获取code
+          util.request(api.Checkauth, { code : code }, 'post').then(function (res) {
+            if (res.success) {
+              // console.log(res)
+              wx.setStorageSync('appkey', res.list.appkey)
+              wx.redirectTo({
+                url: '/pages/auth/auth?uid=' + that.data.uid
+              })
+              // wx.redirectTo({
+              //   url: '/pages/auth/moblie'
+              // })
+            } else {
+              util.showErrorToast(res.info);
+            }
+          })
+          
+        },
+      })
+    });
+  }
+  
+})

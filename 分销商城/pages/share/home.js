@@ -1,0 +1,232 @@
+// pages/share/home.js
+// pages/auth/auth.js
+const util = require('../../utils/util');
+const api = require('../../utils/api');
+const app = getApp();
+Page({
+
+  /**
+   * 页面的初始数据
+   */
+  data: {
+    display:'',
+    disClass:'',
+    Hei: 0,
+    qrShare:[],
+    shareIndex:0,
+    pid:'',
+  },
+  /**
+   * 生命周期函数--监听页面加载
+   */
+  onLoad: function (options) {
+    this.getUserInfo();
+    this.imgAjax();
+    // this.getshareAjax();
+  },
+  showDisplay:function(){
+    // 弹出选择
+    this.setData({
+      display: 'block',
+      disClass: 'hover'
+    })
+  },
+  getUserInfo: function () {
+    let that = this;
+    return new Promise(function (resolve, reject) {
+      wx.login({
+        success: function (res) {
+          var code = res.code;  //获取code
+          util.request(api.Checkauth, { code: code }, 'post').then(function (res) {
+            if (res.success) {
+              // console.log(res)
+              that.setData({
+                pid: res.list.id
+              })
+            } else {
+              util.showErrorToast(res.info);
+            }
+          })
+
+        },
+      })
+    });
+  },
+  closeDisplay:function(){
+    // 取消选择
+    this.setData({
+      display:'',
+      disClass:''
+    })
+  },
+  changIndex:function(e){
+    // 索引改变时
+    let index = e.detail.current; //索引判断当前值
+    this.setData({
+      shareIndex: index
+    })
+  },
+  download: function () {
+    // 保存图片
+    let that = this;
+    let index = that.data.shareIndex;
+    let imageUrl = that.data.qrShare[index];
+    // console.log(index)
+    // console.log(imageUrl)
+    wx.showLoading({
+      title: '正在保存中',
+    })
+    wx.downloadFile({
+      url: imageUrl,
+      success: function (res) {
+        console.log(res);
+        //图片保存到本地
+        wx.saveImageToPhotosAlbum({
+          filePath: res.tempFilePath,
+          success: function (data) {
+            wx.hideLoading()
+            wx.showToast({
+              title: '保存成功',
+              icon: 'success',
+              duration: 2000
+            })
+          },
+          fail: function (err) {
+            console.log(err);
+            if (err.errMsg === "saveImageToPhotosAlbum:fail auth deny") {
+              console.log("当初用户拒绝，再次发起授权")
+              wx.openSetting({
+                success(settingdata) {
+                  console.log(settingdata)
+                  if (settingdata.authSetting['scope.writePhotosAlbum']) {
+                    console.log('获取权限成功，给出再次点击图片保存到相册的提示。')
+                  } else {
+                    console.log('获取权限失败，给出不给权限就无法正常使用的提示')
+                  }
+                }
+              })
+            }
+            wx.hideLoading()
+          },
+          complete(res) {
+            console.log(res);
+            wx.hideLoading()
+          }
+        })
+      }
+    })
+  },
+  
+  getshareAjax: function () {
+    // 获取分享参数
+    let that = this;
+    util.request(api.Getshareparams, { 'id': that.data.id, 'path': '' }).then(function (res) {
+      let shareBox = {
+        'title': res.list.title,
+        'desc': res.list.desc,
+        'path': res.list.path,
+      };
+      that.setData({
+        shareBox: shareBox,
+        avatarurl: res.list.avatarurl,
+        imageUrl: res.list.imageUrl
+      })
+    });
+  },
+  onShareAppMessage: function (option) {
+    // 转发
+    let that = this;
+    let shareBox = that.data.shareBox;
+    let index = that.data.shareIndex;
+    let imageUrl = that.data.qrShare[index];
+    let pid = that.data.pid;
+    // console.log(imageUrl)
+    let title = shareBox.title;
+    return {
+      title: title,
+      path: '/pages/home/home?pid'+ pid, //默认是当前页面，必须是以‘/’开头的完整路径
+      imageUrl: imageUrl, // 自定义图片路径，可以是本地文件路径、代码包文件路径或者网络图片路径，支持PNG及JPG，不传入 imageUrl 则使用默认截图。显示图片长宽比是 5:4
+      success: function (res) {
+        // res.shareTickets
+        console.log(res)
+      },
+      fail: function (res) {
+        console.log(res)
+      }
+    }
+  },
+
+  imgH: function (e) {
+    // swiper图片轮播高度
+    let that = this;
+    let winWid = wx.getSystemInfoSync().windowWidth;         //获取当前屏幕的宽度
+    let imgh = e.detail.height;　　　　　　　　　　　　　　　　//图片高度
+    let imgw = e.detail.width;
+    let swiperH = winWid * imgh / imgw + "px";
+
+    that.setData({
+      Hei: swiperH,　　　　　　　　//设置高度
+    })
+  },
+  imgAjax:function(){
+    // 二维码请求
+    let that = this;
+    util.request(api.Createpb, { }).then(function (res) {
+      // console.log(res)
+      if(res.success){
+        that.setData({
+          qrShare: res.list
+        })
+      }
+    });
+  },
+
+  /**
+   * 生命周期函数--监听页面初次渲染完成
+   */
+  onReady: function () {
+
+  },
+
+  /**
+   * 生命周期函数--监听页面显示
+   */
+  onShow: function () {
+
+  },
+
+  /**
+   * 生命周期函数--监听页面隐藏
+   */
+  onHide: function () {
+
+  },
+
+  /**
+   * 生命周期函数--监听页面卸载
+   */
+  onUnload: function () {
+
+  },
+
+  /**
+   * 页面相关事件处理函数--监听用户下拉动作
+   */
+  onPullDownRefresh: function () {
+
+  },
+
+  /**
+   * 页面上拉触底事件的处理函数
+   */
+  onReachBottom: function () {
+
+  },
+
+  /**
+   * 用户点击右上角分享
+   */
+  onShareAppMessage: function () {
+
+  }
+})

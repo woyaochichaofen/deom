@@ -1,0 +1,285 @@
+image{
+  background: pink
+}
+.searchBar input{
+  width: 75%;
+  height: 80rpx;
+  margin:20rpx 0 0 5%; 
+  background: #efefef;
+  padding-left: 20rpx;
+}
+.searchBar view{
+  width: 70%;
+  height: 80rpx;
+  padding-left:32rpx;
+  position: absolute;
+  background: #efefef;
+  left: 5%;
+  top: 20rpx;
+  z-index: 10;
+}
+.searchBar view icon{
+  position: absolute;
+  top: 26rpx;
+}
+.searchBar view text{
+  margin-left: 48rpx;
+  font-size: 32rpx;
+  color: #888;
+  line-height: 80rpx;
+}
+.searchBar image{
+  width: 56rpx;
+  height: 50rpx;
+  position: absolute;
+  top: 40rpx;
+  right: 8%;
+}
+/* banner */
+.Banner{
+  width: 90%;
+  height: auto;
+  margin:25rpx 0 0 5%; 
+}
+.Banner image{
+  width: 100%;
+}
+/* 集合样式 */
+.box{
+  width: 90%;
+  height: 560rpx;
+  margin:100rpx 0 0 5%;
+  border: 2rpx solid #f4a040;
+}
+.box>view:first-child{
+  float: none;
+  width: 46%;
+  height: 110rpx;
+  margin: auto;
+  box-shadow:none;
+  margin-top: -60rpx;
+}
+.boximg{
+  width: 100%;
+  height: 100%;
+}
+.box>view{
+  box-shadow: 0rpx 0rpx 8rpx rgb(204, 204, 204);
+}
+.boxView{
+  width: 94%;
+  height: 90%;
+  margin-left:10rpx; 
+  border: 1rpx solid #f8ba48;
+  text-align: center;
+  padding: 0;
+  color: #f8ba48;
+  line-height: 20rpx;
+}
+.boxView text:nth-child(1){
+  width: 100%;
+  height: auto;
+  display: inline-block;
+  font-size: 38rpx;
+}
+.boxView text:nth-child(2){
+  font-size: 24rpx;
+}
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  color: transparent;
+}
+/* 新人福利 */
+.NewFuliviewD{
+  height: 534rpx;
+}
+.NewFuliview{
+  width: 45%;
+  height: 380rpx;
+  padding-top: 34rpx;
+  text-align: center;
+  font-size: 28rpx;
+  /* font-weight: bold; */
+  float: left;
+  margin:40rpx 0 0 3%;  
+}
+.NewFuliview text{
+  padding: 10rpx 20rpx;
+  display: inline-block;
+  background: #f83d3d;
+  line-height: 20rpx;
+  color: white;
+  border-radius: 20rpx;
+  margin-top:10rpx; 
+  font-size: 20rpx;
+  /* font-weight: normal; */
+}
+.NewFuliview image{
+  width: 220rpx;
+  height: 220rpx;
+  margin: auto;
+  margin-top:30rpx; 
+}
+/* 爆款 */
+.Baokuan{
+  width: 90%;
+  height: 200rpx;
+  margin:40rpx 0 0 5%;
+  line-height: 32rpx;
+}
+.Baokuan image{
+  width: 180rpx;
+  height: 180rpx;
+  margin: 10rpx;
+  float: left;
+  margin-right: 40rpx;
+}
+.Baokuan text:nth-child(2){
+  display: block;
+  font-size: 28rpx;
+  margin: 20rpx 20rpx 20rpx 0;
+  padding-top:20rpx; 
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.Baokuan text:nth-child(3){
+  display: inline-block;
+  color: #fd8325;
+  font-size: 28rpx;
+  margin-right: 12rpx;
+}
+.Baokuan text:nth-child(4){
+  background:#fd8325;
+  font-size: 20rpx;
+  padding-left: 8rpx;
+  padding-right: 8rpx;
+  color: white;
+}
+.Baokuan text:last-child{
+  color: #888;
+  font-size: 20rpx;
+  text-decoration: line-through;
+}
+/* 每日 */
+.everDay{
+  width: 90%;
+  white-space: nowrap;
+  height: 450rpx;
+  margin:30rpx 5% 0 5%;
+  box-shadow: 0rpx 0rpx 8rpx rgb(204, 204, 204);
+}
+.everDay view{
+  width: 300rpx;
+  height: 100%;
+  display: inline-block;
+}
+.everDay view image{
+  width: 90%;
+  height: 260rpx;
+  margin: 10rpx 0 0 5%;
+}
+.everDay view text{
+  display: block;
+  text-align: center;
+  white-space: normal;
+}
+.everDay view text:nth-child(2){
+  padding: 4rpx 6% 0 6%;
+  font-size: 28rpx;
+}
+.everDay view text:nth-child(3){
+  display: inline-block;
+  background:#fd8325;
+  border-radius: 20rpx;
+  font-size: 28rpx;
+  text-align: center;
+  padding: 0 12rpx;
+  margin: 16rpx 0 6rpx 35%;
+  color: white;
+}
+.everDay view text:nth-child(4){
+    color: #888;
+  font-size: 20rpx;
+  text-decoration: line-through;
+}
+/* 精选 */
+.Selected{
+  width: 90%;
+  height: 260rpx;
+  margin: 30rpx 0 0 5%;
+  overflow: hidden;
+  position: relative;
+}
+.Selected image{
+  width: 100%;
+  height: 100%;
+}
+.Selected view{
+  width: 100%;
+  color: white;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  padding: 18rpx 18rpx 14rpx 24rpx;
+  background: rgba(000, 000, 000, .6);
+}
+.Selected view text{
+  display: inline-block;
+  width: 75%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+/* 猜你喜欢 */
+.foot{
+  width: 100%;
+  /* height: 1000rpx; */
+  overflow: hidden;
+  padding: 20rpx 0 0 0;
+  background: #eee;
+}
+.foot view{
+  width: 347rpx;
+  height: 480rpx;
+  background: white;
+  float: left;
+  margin:0 0 20rpx 20rpx;
+  line-height: 38rpx;
+}
+.foot view image{
+  width: 90%;
+  height: 54%;
+  margin: 5% 0 3% 3%;
+}
+.foot view text{
+  display: inline-block;
+  width: 84%;
+  margin-left:7%;
+  font-size: 28rpx;
+}
+.foot view text:nth-child(2){
+  margin-bottom:12rpx; 
+}
+.foot view text:nth-child(3){
+  display: inline;
+  color: #fd8325;
+  font-size: 32rpx;
+  position: relative;
+}
+.foot view text text{
+  width: 40rpx;
+  position: absolute;
+  top: 8rpx;
+  right: -68rpx;
+  background:#fd8325;
+  font-size: 20rpx;
+  padding: 0 8rpx 0 8rpx;
+  color: white;
+  line-height: 30rpx;
+}
+.foot view text:nth-child(4){
+  color: #888;
+  font-size: 20rpx;
+  text-decoration: line-through;
+}

@@ -1,0 +1,76 @@
+/* pages/wallet/presentation.wxss */
+page{
+  background: #fff;
+}
+.Form{
+  width: 100%;
+  height: 390rpx;
+  /* margin: 40rpx 0; */
+  margin-bottom:80rpx;
+}
+.Form-view{
+  width: 96%;
+  height: 104rpx;
+  line-height: 104rpx;
+  margin-left:2%;
+  border-bottom: 1rpx solid #b7b7b7;
+  font-size: 30rpx;
+  color: #5c5c5c;
+  padding-left: 10rpx;
+}
+.Form-view-text{
+  float: left
+}
+.Form-view-input{
+  float: left;
+  width: 70%;
+  height: 70rpx;
+  margin: 15rpx 0 0 40px; 
+  font-size: 28rpx;
+}
+.balance{
+  color: black;
+}
+/* 按钮 */
+.Button{
+  width: 90%;
+  height: 80rpx;
+  color: white;
+  background: #e7474f;
+  line-height: 80rpx;
+  text-align: center;
+  font-size: 30rpx;
+  margin-left: 5%;
+  border-radius: 18rpx;
+}
+/* 特别说明 */
+.Explain{
+  width: 96%;
+  margin: 30rpx 0 0 2%;
+  height: 100rpx;
+  text-align: center;
+  line-height: 100rpx;
+  font-size: 34rpx;
+}
+.Explain view{
+  width: 28%;
+  border: 1rpx solid #f57a61;
+  margin-top: 49rpx;
+}
+.Explain view:first-child{
+  float: left;
+  margin-left: 6%;
+}
+.Explain view:last-child{
+  float: right;
+  margin-right: 6%;
+}
+
+/* 特别说明内容 */
+.Explain-content{
+  width: 96%;
+  margin: 0rpx 0 0 8%;
+  height: auto;
+  color: #757575;
+  line-height: 40rpx;
+}

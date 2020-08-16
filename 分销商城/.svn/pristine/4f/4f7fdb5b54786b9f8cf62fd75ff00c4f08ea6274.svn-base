@@ -1,0 +1,139 @@
+page{
+  background: #f6f6f6;
+  padding-top: 50px;
+}
+.dingdan-body{
+  background: #f6f6f6;
+}
+.nav{
+  position:fixed;
+  top:0;
+  z-index:99;
+}
+.tab{
+  float: left;
+  width: 20%;
+  text-align: center;
+  padding:10rpx 0 20rpx;
+}
+.topTabSwiper{
+  border-bottom: 1px solid #ccc; 
+  background: #fff;
+  position: fixed;
+  top:0;
+  left:0;
+  z-index: 90;
+  width:100%;
+  zoom: 1;}
+.topTabSwiper:after{
+  content: ""; 
+  clear: both;
+  display: block;
+  }
+.tabBorer{
+  border-bottom: 1px solid #ff6b00; 
+  color: #ff7a14;
+  }
+.swiper{
+  width: 100%;
+  }
+.swiper_con{
+  text-align: center; 
+  width: 100%; 
+  height: 100%;
+  margin-top: 10px;
+  /* padding: 80rpx 0; */
+  }
+
+
+/* 暂无更多数据 */
+.dingdan-suoju{
+  background: #fff;
+  text-align: center;
+  color:#666;
+  padding:16rpx;
+  margin-top:-20rpx;
+}
+
+/* 数据样式 */
+
+.qblist{
+  background:#fff;
+  text-align:left;
+  margin-top:20rpx;
+  width:100%;
+  height:auto;
+  overflow:hidden;
+
+}
+.qblist:nth-child(1){
+  margin-top: 0;
+}
+.qbhead{
+  padding:32rpx 20rpx;
+}
+.qbhead>view:nth-child(1){
+  float: right;
+  color:#ff7a14;
+}
+.qbbrand{
+  background: #f6f6f6;
+  overflow: hidden;
+  padding:26rpx 20rpx;
+  border-top:2rpx solid rgb(218, 217, 217);
+}
+.qbbrand:nth-child(2){
+  border-top:1rpx solid transparent;
+}
+.qbimg{
+  width:168rpx;
+  height:168rpx;
+  background: pink;
+  float: left;
+  margin-left:30rpx;
+}
+.qbtext{
+  padding-right:30rpx;
+  padding-left: 220rpx;
+}
+.qbtext>view:nth-child(1){
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.qbtext>view:nth-child(2){
+  font-size: 28rpx;
+  color:#777;
+  margin-top:20rpx;
+}
+.qbtext>view:nth-child(3){
+  color:#ff7a14;
+  margin-top:38rpx;
+  font-size: 34rpx;
+}
+.qbfoottext{
+  text-align: right;
+  font-size: 27rpx;
+  padding:20rpx 0;
+  margin:0 20rpx;
+  border-bottom: 2rpx solid rgb(241, 241, 241);
+}
+.qbbtn{
+  float: right;
+  margin:20rpx 0;
+  padding:0 20rpx;
+}
+.qbbtn>view{
+  float: left;
+  border:2rpx solid rgb(206, 204, 204);
+  padding:11rpx 0;
+  width:150rpx;
+  text-align: center;
+}
+.qbbtn>view:nth-child(1){
+  margin-right:20rpx;
+}
+#qbmoren{
+  color:#ff7a14;
+  border:2rpx solid #ff7a14;
+}

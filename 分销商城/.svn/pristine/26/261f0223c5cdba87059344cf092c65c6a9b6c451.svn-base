@@ -1,0 +1,29 @@
+<form>
+  <form-group class='margin-top'>
+    <view class='title' style='padding-right:30px'>收货人</view>
+    <input placeholder="请输入您的真实姓名" bindinput='InputName' value="{{name}}"></input>
+  </form-group>
+  <form-group>
+    <view class='title'>手机号码</view>
+    <input placeholder="请输入手机号码" bindinput='InputPhone' value="{{mobile}}"></input>
+  </form-group>
+  <form-group>
+    <picker class="picker_select" mode="region" bindchange="bindRegionChange" value="{{region}}" custom-item="{{customItem}}">
+      <view class='title title_t'>
+        选择地区<view class="title_r" wx:if="{{multiTrue == true}}">{{region[0]}}-{{region[1]}}-{{region[2]}}</view>
+        <view class="title_r" wx:else>请选择地区</view>
+      </view>
+    </picker>
+  </form-group>
+  <form-group>
+    <view class='title'>详细地址</view>
+    <textarea placeholder="街道门牌信息" value='{{addresstext}}' bindinput='InputAddress' value="{{address}}"></textarea>
+  </form-group>
+  <!-- <view class='padding text-sm text-gray'>注：申请后，我们将尽快与您联系，并未您开通团长身份</view> -->
+  <view class='padding'>
+    <button class='bg-orange lg block' bindtap='submit'>修改地址</button>
+  </view>
+  <view class='padding'>
+    <button class='bg-red lg block' bindtap='delShow'>删除地址</button>
+  </view>
+</form>

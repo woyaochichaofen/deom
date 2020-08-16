@@ -1,0 +1,11 @@
+<!--pages/components/shopitem/shopitem.wxml-->
+<view>{{number}}</view>
+<view class="shop">
+  <block wx:for="{{goodsList}}" wx:key>
+    <view class='ul'>
+      <view class="title">{{item.goods_name}}</view>
+      <view class="time">{{item.goods_salse}}</view>
+    </view>
+  </block>
+</view>
+

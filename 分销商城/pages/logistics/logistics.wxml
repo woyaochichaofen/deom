@@ -1,0 +1,22 @@
+
+<view class="logistino">
+  <view class="logistino-s">物流公司:{{logistics}}</view>
+  <view class="logistino-n">物流单号:{{logistino}}</view>
+</view>
+
+<view class="track-rcol">
+  <view class="track-list">
+    <block wx:for="{{logList}}">
+      <view class="track-list-li {{index == 0 ? 'first' : '' }}">
+        <view class="node-icon img-logistino"></view>
+        <view class="time">{{item.datetime}}</view>
+        <view class="txt">{{item.remark}}</view>
+      </view>
+    </block>
+  </view>
+</view>
+
+<view class="oper_show" wx:if="{{logList.length == 0}}">
+  <view class="oper_show_bg img-wuliu"></view>
+  <text>暂无更多物流数据</text>
+</view>

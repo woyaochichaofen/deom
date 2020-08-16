@@ -1,0 +1,69 @@
+// components/shopitem/shopitem.js
+const util = require('../../../utils/util');
+const api = require('../../../utils/api');
+
+Component({
+  /**
+   * 组件的属性列表
+   */
+  properties: {
+    /** 当前item数据 */
+    shop: {
+      type: Array,
+      value: [{
+        image: '',
+        title: '标题标题标题标题标题标题标题标题标题标题标题标题标题标题',
+        customer: '赞助商',
+        time: '04月30日13:00',
+        total: 120,
+        id: 1,
+      }]
+    },
+  },
+
+  /**
+   * 组件的初始数据
+   */
+  data: {
+    goodsList:'',
+    number:0
+  },
+  pageLifetimes: {
+    // 组件所在页面的生命周期函数
+    created:function(){
+      // 在组件实例刚刚被创建时执行
+      this.goodsList();
+      console.log('okey')
+    },
+  
+  },
+  /**
+   * 组件的方法列表
+   */
+  methods: {
+    /** 方法事件*/
+    onMyButtonTap: function () {
+      let that = this;
+      that.setData({
+        number: 1
+        // 更新属性和数据的方法与更新页面数据的方法类似
+      })
+    },
+    goodsList(){
+      util.request(api.Goodslist, {}, 'POST').then(res => {
+        // console.log(res)
+        if (res.success) {
+          // 设置传参
+          this.setData({
+            goodsList: res.list
+          })
+        } else {
+          wx.showToast({
+            title: res.info,
+          })
+        }
+      })
+    }
+    
+  }
+})

@@ -1,0 +1,9 @@
+var WxApiRoot = 'http://qihaoshop.case.gzqihao.com/';
+
+var app = getApp();
+module.exports = {
+  UserInfo: WxApiRoot + 'index',                      //授权用户信息
+  Detail: WxApiRoot + 'detail',                       //请求用户信息
+
+  Editmobile: WxApiRoot + 'editmobile',                //修改、绑定手机号码
+}

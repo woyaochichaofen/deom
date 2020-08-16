@@ -1,0 +1,13 @@
+<!--pages/components/shopitem/shopitem.wxml-->
+
+<!-- <text>pages/components/shopitem/shopitem.wxml</text> -->
+
+<view class="shop">
+  <block wx:for="{{goodsList}}">
+    <view class='ul'>
+      <view class="title">{{item.goods_name}}</view>
+      <view class="time">{{item.goods_salse}}</view>
+    </view>
+  </block>
+</view>
+

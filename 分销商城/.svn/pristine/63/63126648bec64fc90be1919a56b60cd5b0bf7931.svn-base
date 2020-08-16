@@ -1,0 +1,73 @@
+<view class="head img-ucBg">
+  <view>
+    <view class='text-xl margin-bottom-sm'>{{nickName}}</view>
+    <view>开启美好的一天</view>
+  </view>
+  <avatar class="round xl" style="background-image:url({{avatarUrl}});"></avatar>
+</view>
+<list class="menu card-menu shadow-lg ucNav">
+  <item class="arrow" bindtap="toOrder" data-id="0">
+    <view class='content'>
+      我的订单
+    </view>
+    <view class='text-gray text-sm'>查看全部</view>
+  </item>
+  <list class="grid no-border">
+    <item bindtap="toOrder" data-id="1">
+      <view class='img-iconPay'>
+        <tag class="badge" wx:if='{{order.one > 0}}'>{{order.one}}</tag>
+      </view>
+      <text>待付款</text>
+    </item>
+    <item bindtap="toOrder" data-id="2">
+      <view class='img-iconPack'>
+        <tag class="badge" wx:if='{{order.two > 0}}'>{{order.two}}</tag>
+      </view>
+      <text>待收货</text>
+    </item>
+    <!-- <item bindtap="toOrder" data-id="3">
+      <view class='img-iconSend'></view>
+      <text>已发货</text>
+    </item> -->
+    <item bindtap="toOrder" data-id="3">
+      <view class='img-iconSign'>
+        <tag class="badge" wx:if='{{order.three > 0}}'>{{order.three}}</tag>
+      </view>
+      <text>已完成</text>
+    </item>
+    <item bindtap="toOrder" data-id="4">
+      <view class='img-iconDone'>
+        <tag class="badge" wx:if='{{order.four > 0}}'>{{order.four}}</tag>
+      </view>
+      <text>已取消</text>
+    </item>
+  </list>
+</list>
+
+<list class="menu ucMenu">
+  <item class="arrow">
+    <navigator class='content flex-sub' url='../address/home/home' open-type='navigate' hover-class='none'>
+      <image src='/images/user/wd7.png' mode='widthFix' class='png'></image> 我的钱包
+    </navigator>
+  </item>
+  <item class="arrow">
+    <navigator class='content flex-sub' url='/pages/coupon/coupon' open-type='navigate' hover-class='none'>
+      <image src='/images/user/wd8.png' mode='widthFix' class='png'></image> 推广二维码
+    </navigator>
+  </item>
+  <item class="arrow">
+    <navigator class='content flex-sub' url='../join/home' open-type='navigate' hover-class='none'>
+      <image src='/images/user/wd9.png' mode='widthFix' class='png'></image> 我的粉丝
+    </navigator>
+  </item>
+  <item class="arrow">
+    <navigator class='content flex-sub' url='../manager/home/home' open-type='navigate' hover-class='none'>
+      <image src='/images/user/wd10.png' mode='widthFix' class='png'></image> 优惠卷
+    </navigator>
+  </item>
+  <item class="arrow">
+    <navigator class='content flex-sub' url='/pages/address/home' open-type='navigate' hover-class='none'>
+      <image src='/images/user/wd11.png' mode='widthFix' class='png'></image> 收货地址
+    </navigator>
+  </item>
+</list>

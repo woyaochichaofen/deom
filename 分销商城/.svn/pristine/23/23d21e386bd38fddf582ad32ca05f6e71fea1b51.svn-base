@@ -1,0 +1,22 @@
+<image src='/images/yd1.png' class="nb-head"></image>
+
+<block wx:for="{{list}}">
+  <view class='nb-row' bindtap='goGoods' data-id="{{item.goods_id}}">
+  <image class='nb-left' src='{{item.goods_logo}}'></image>
+  <view class='nb-right'>
+    <view class='nb-text1'>{{item.goods_name}}</view>
+    <view class='nb-text2'>
+      <text>￥{{item.goods_price}}</text>
+      <text>￥{{item.market_price}}</text>
+    </view>
+    <view class='nb-btn'>购买升级云店</view>
+  </view>
+</view>
+</block>
+
+<view id="pageData" wx:if="{{pageData}}">- 我是有底线的 -</view>
+
+<view class='floatdiv' hidden='{{hover}}'>
+  <image class='floatimg' src='/images/yd3.png'></image>
+  <image class='floatbtn png' src='/images/yd4.png'  bindtap='hideHover'></image>
+</view>

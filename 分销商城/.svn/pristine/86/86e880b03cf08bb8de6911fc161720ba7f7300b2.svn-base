@@ -1,0 +1,210 @@
+function coutDownTime(startTime, endTime){
+  let curTime = new Date().getTime();
+  if (curTime < startTime) {
+    var downTime = this.arryCountDown(startTime, curTime);
+  } else {
+    if (endTime > curTime) {
+      var downTime = this.arryCountDown(endTime, curTime);
+    } else {
+      if (endTime < startTime) {
+        endTime = endTime + 86400000;
+        var downTime = this.arryCountDown(endTime, curTime);
+      } else {
+        startTime = startTime + 86400000;
+        var downTime = this.arryCountDown(startTime, curTime);
+      }
+    }
+  }
+  return downTime
+}
+function arryCountDown(start, end) {
+  let hours = parseInt((start - end) / 3600000);
+  if (hours < 10) {
+    hours = '0' + hours
+  }
+  let minutes = parseInt((start - end) / 60000) - hours * 60;
+  if (minutes < 10) {
+    minutes = '0' + minutes
+  }
+  let seconds = parseInt((start - end) / 1000) - hours * 3600 - minutes * 60;
+  if (seconds < 10) {
+    seconds = '0' + seconds
+  }
+  let downTime = {
+    hours,
+    minutes,
+    seconds
+  }
+  return downTime
+}
+function formatTime(date) {
+  var year = date.getFullYear()
+  var month = date.getMonth() + 1
+  var day = date.getDate()
+
+  var hour = date.getHours()
+  var minute = date.getMinutes()
+  var second = date.getSeconds()
+
+
+  return [year, month, day].map(formatNumber).join('-') + ' ' + [hour, minute, second].map(formatNumber).join(':')
+}
+
+function formatNumber(n) {
+  n = n.toString()
+  return n[1] ? n : '0' + n
+}
+
+/**
+ * 封封微信的的request
+ */
+function request(url, data = {}, method = "POST") {
+  return new Promise(function(resolve, reject) {
+    // console.log(userAppkey)
+    wx.request({
+      url: url,
+      data: data,
+      method: method,
+      header: {
+        'Content-Type': 'application/json',
+        'appkey': wx.getStorageSync('appkey')
+      },
+      success: function(res) {
+        if (res.statusCode == 200) {
+          if (res.data.info == "登录异常"){
+            // console.log('有')
+            try {
+              // wx.removeStorageSync('userInfo');
+              // wx.removeStorageSync('appkey');
+            } catch (e) {
+              // Do something when catch error
+            }
+            // 切换到登录页面
+            // wx.redirectTo({
+            //   url: '/pages/auth/auth'
+            // });
+          }else{
+            resolve(res.data);
+          }
+          // if (res.data.errno == 501 || res.data.errno == 502) {
+          //   // 清除登录相关内容
+          //   try {
+          //     wx.removeStorageSync('userInfo');
+          //     wx.removeStorageSync('appkey');
+          //   } catch (e) {
+          //     // Do something when catch error
+          //   }
+          //   // 切换到登录页面
+          //   wx.redirectTo({
+          //     url: '/pages/auth/auth'
+          //   });
+          // } else {
+          //   resolve(res.data);
+          // }
+        } else {
+          reject(res.errMsg);
+        }
+
+      },
+      fail: function(err) {
+        reject(err)
+      }
+    })
+  });
+}
+
+function isValidPhone(str) {
+  var myreg = /^[1][3,4,5,7,8][0-9]{9}$/;
+  if (!myreg.test(str)) {
+    return false;
+  } else {
+    return true;
+  }
+}
+
+function getUserInfo() {
+  let that = this;
+  return new Promise(function(resolve, reject) {
+    that.request(api.UserInfo).then(res => {
+      if (res.errno === 0) {
+        //存储用户信息
+        wx.setStorageSync('userInfo', res.data);
+        resolve(res);
+      } else {
+        reject(res);
+      }
+    }).catch((err) => {
+      reject(err);
+    });
+  })
+}
+
+function redirect(url) {
+  //判断页面是否需要登录
+  if (false) {
+    wx.redirectTo({
+      url: '/pages/auth/login'
+    });
+    return false;
+  } else {
+    wx.redirectTo({
+      url: url
+    });
+  }
+}
+
+function showErrorToast(msg) {
+  wx.showToast({
+    title: msg,
+    image: '/images/icon_error.png'
+  })
+}
+
+function isValidCard(idCard) {
+  //15位和18位身份证号码的正则表达式
+  var regIdCard = /^(^[1-9]\d{7}((0\d)|(1[0-2]))(([0|1|2]\d)|3[0-1])\d{3}$)|(^[1-9]\d{5}[1-9]\d{3}((0\d)|(1[0-2]))(([0|1|2]\d)|3[0-1])((\d{4})|\d{3}[Xx])$)$/;
+
+  //如果通过该验证，说明身份证格式正确，但准确性还需计算
+  if (regIdCard.test(idCard)) {
+    if (idCard.length == 18) {
+      var idCardWi = new Array(7, 9, 10, 5, 8, 4, 2, 1, 6, 3, 7, 9, 10, 5, 8, 4, 2); //将前17位加权因子保存在数组里
+      var idCardY = new Array(1, 0, 10, 9, 8, 7, 6, 5, 4, 3, 2); //这是除以11后，可能产生的11位余数、验证码，也保存成数组
+      var idCardWiSum = 0; //用来保存前17位各自乖以加权因子后的总和
+      for (var i = 0; i < 17; i++) {
+        idCardWiSum += idCard.substring(i, i + 1) * idCardWi[i];
+      }
+      var idCardMod = idCardWiSum % 11; //计算出校验码所在数组的位置
+      var idCardLast = idCard.substring(17); //得到最后一位身份证号码
+      //如果等于2，则说明校验码是10，身份证号码最后一位应该是X
+      if (idCardMod == 2) {
+        if (idCardLast == "X" || idCardLast == "x") {
+          return true
+        } else {
+          return false
+        }
+      } else {
+        //用计算出的验证码与最后一位身份证号码匹配，如果一致，说明通过，否则是无效的身份证号码
+        if (idCardLast == idCardY[idCardMod]) {
+          return true
+        } else {
+          return false
+        }
+      }
+    }
+  } else {
+    return false
+  }
+}
+
+
+module.exports = {
+  formatTime,
+  request,
+  redirect,
+  showErrorToast,
+  getUserInfo,
+  isValidPhone,
+  isValidCard,
+  coutDownTime,
+  arryCountDown,
+}

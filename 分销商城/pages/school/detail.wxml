@@ -1,0 +1,7 @@
+<!--pages/school/detail.wxml-->
+<!-- <text>pages/school/detail.wxml</text> -->
+<import src="../../wxParse/wxParse.wxml"/>
+
+<view class="contentBox">
+  <template is="wxParse" data="{{wxParseData:article.nodes}}"/>
+</view>

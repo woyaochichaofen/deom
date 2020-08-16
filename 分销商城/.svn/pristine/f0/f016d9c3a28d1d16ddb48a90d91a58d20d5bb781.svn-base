@@ -1,0 +1,16 @@
+<image src='/images/childs/yd1.png' class="nb-head"></image>
+<view class='nb-header'>
+  <image src='/images/childs/yd2.png'></image>
+</view>
+<view class='nb-row' wx:for="{{list}}" bindtap='dindan'>
+  <image class='nb-left' src='{{item.goods_logo}}'></image>
+  <view class='nb-right'>
+    <view class='nb-text1'>{{item.goods_name}}</view>
+    <view class='nb-text2'>
+      <text>￥{{item.goods_price}}</text>
+      <text>￥{{item.market_price}}</text>
+    </view>
+    <view class='nb-btn'>购买升级云店</view>
+  </view>
+</view>
+<view id="pageData" wx:if="{{pageData}}">- 我是有底线的 -</view>

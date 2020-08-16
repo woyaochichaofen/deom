@@ -1,0 +1,17 @@
+<!--pages/school/school.wxml-->
+<view class='nav fixed'>
+  <view class="navList">
+    <view class="nav-li img-school1" data-index="0" bindtap='clickType'>关于商家</view>
+    <view class="nav-li img-school2" data-index="1" bindtap='clickType'>关于加盟</view>
+    <view class="nav-li img-school3" data-index="2" bindtap='clickType'>关于会员</view>
+  </view>
+</view>
+
+<view class="shopList">
+  <block wx:for="{{shopList}}">
+    <view class="shopList-li img-next" bindtap='goDetail' data-id="{{item.id}}">
+      <view class="shopList-li-text">{{item.title}}</view>
+    </view>
+  </block> 
+</view>
+<view id="pageData" wx:if="{{pageData}}">- 我是有底线的 -</view>

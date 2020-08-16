@@ -1,0 +1,66 @@
+<!--pages/cart/home.wxml-->
+<!-- <text>pages/cart/home.wxml</text>/n
+<shopitem bind:myevent="onMyEvent" data-id="1"/> -->
+<bar class="flex search">
+  <navigator class='serach-form round' url='/pages/search/search' hover-class='none'>
+    <text class="icon-search"></text>
+    <text>搜索热门商品</text>
+  </navigator>
+</bar>
+
+<!-- <swiper class="banner" autoplay="false" interval="5000" duration="500" indicator-dots="true" indicator-active-color="#a2c340" circular="true" style='height:{{Hei}}'>
+      <block wx:for="{{bannerList}}">
+        <swiper-item>
+            <image src="{{item.logo}}" class="slide-image" mode="widthFix" bindload='imgH' data-id="{{item.url}}" bindtap='goGoods'/>
+        </swiper-item>
+      </block>
+</swiper> -->
+
+<shopitem id="goodsList"/>
+
+<!-- 新人福利 -->
+<!-- <view class="box NewFuliviewD">
+  <view><image src="/images/home/biaoti1.png" class="boximg"></image></view>
+  <view class="NewFuliview" wx:for="{{newList}}">
+    {{item.type_name}}
+    <text>{{item.goods_price}}</text>
+    <image src="{{item.goods_logo}}"/>
+  </view>
+</view> -->
+
+<!-- 爆款专区 -->
+<!-- <view class="box">
+  <view><image src="/images/home/biaoti2.png" class="boximg"></image></view>
+  <view class="Baokuan" wx:for="{{Baokuan}}">
+    <image src="{{item.url}}"/>
+    <text>{{item.txt}}</text>
+    <text>{{item.txt1}}</text>
+    <text>新品</text>
+    <text>\n{{item.txt2}}</text>
+  </view>
+</view> -->
+
+<!-- 每日专享 -->
+<!-- <view class="box">
+  <view><image src="/images/home/biaoti3.png" class="boximg"></image></view>
+  <scroll-view class="everDay" scroll-x>
+    <view wx:for="{{everd}}">
+      <image src="{{item.url}}"></image>
+      <text>{{item.txt}}</text>
+      <text>{{item.txt1}}</text>
+      <text>{{item.txt2}}</text>
+    </view>
+  </scroll-view>
+</view> -->
+
+<!-- <view class="box" style="height:680rpx;">
+  <view><image src="/images/home/biaoti4.png" class="boximg"></image></view>
+  <view class="Selected" wx:for="{{Selected}}">
+    <image src="{{item.url}}"></image>
+    <view>
+      <text>{{item.txt}}</text>
+    </view>
+  </view>
+</view> -->
+
+

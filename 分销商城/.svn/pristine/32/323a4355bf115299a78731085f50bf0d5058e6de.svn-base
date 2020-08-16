@@ -1,0 +1,273 @@
+.site{
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  position: relative;
+  background-size:8px;
+  background-repeat:no-repeat;
+  background-position:calc(100% - 13px) center;  
+  padding: 15px 0;
+  background-color: #ffece1;
+}
+.dizhib{
+  width: 100%;
+  height: 5px;
+  background-size:100%;
+  background-repeat:no-repeat;
+  background-position:center center;  
+}
+.site-bg{
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 50%;
+  left: 13px;
+  transform: translateY(-50%);
+  background-size:70%;
+  background-repeat:no-repeat;
+  background-position:center center;  
+}
+.site-value{
+  float: left;
+  width: 75%;
+  margin-left: 56px;
+  height: auto;
+  overflow: hidden;
+}
+.site-no{
+  width: 100%;
+  color: #fe3535;
+  font-size: 4.5vw;
+  line-height: 12vw;
+  word-break: break-all;
+}
+
+.site-name{
+  font-size: 4vw;
+  font-weight: 400;
+  color: #333333;
+}
+.site-mobile{
+  display: inline-block;
+  margin-left: 4.2vw;
+  color: #333333;
+}
+.site-address{
+  width: 100%;
+  /* margin-bottom: 5px; */
+  color: #666666;
+  font-size: 3.5vw;
+  line-height: 20px;
+  margin-top: 2px;
+  word-break: break-all;
+}
+
+.title{
+  font-weight: normal;
+  font-size: 4vw;
+  padding: 10px 0 10px 3%;
+}
+
+.goods{
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+.goods-list-li{
+    display: block;
+    width: 100%;
+    float: left;
+    background: #fff;
+    border-bottom: 1px solid #ededed;
+    overflow: hidden;
+}
+.goods_details{
+  width: 100%;
+  height: 80px;
+  background: #fff;
+  padding: 10px 4%;
+  box-sizing: border-box;
+  position: relative;
+}
+.goods-img{
+  display: block;
+  width: 59px;
+  height: 59px;
+  margin-bottom: 10px;
+  float: left;
+  margin-right: 5px;
+}
+.goods_details_t{
+color: #333333;
+    width: 60%;
+    float: left;
+    line-height: 18px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    font-weight: normal;
+    font-size: 3.5vw;
+    padding: 0px 5px;
+    margin-bottom: 5px;
+}
+.goods_details_m{
+  position: absolute;
+    right: 10px;
+    top: 19px;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+    font-weight: normal;
+    font-size: 3.5vw;
+    color: #ff6f03;
+    line-height: 23px;
+}
+.goods_details_s{
+  position: absolute;
+    right: 10px;
+    bottom: 5px;
+    font-weight: normal;
+    font-size: 3.5vw;
+    color: #666666;
+    line-height: 23px;
+}
+.goods_details_h{
+  position: absolute;
+    left: 83px;
+    bottom: 5px;
+    font-weight: normal;
+    font-size: 3vw;
+    color: #666666;
+    line-height: 23px;
+}
+
+
+.payment{
+  width: 100%;
+  height: auto;
+  overflow: hidden
+}
+
+.payment-list{
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  background: #fff;
+}
+.payment-list-li{
+  width: 100%;
+  height: auto;
+  border-bottom: 1px solid #f1f1f1;
+}
+.payment-list-li-a{
+  display: block;
+  margin: 1.4% 3%;
+  padding: 1vw 1.5vw;
+  border: 1px solid #fff;
+  border-radius: 7px;
+  overflow: hidden;
+  box-sizing: border-box;
+  position: relative;
+}
+.payment-list-li.hover .payment-list-li-a{
+  border-radius: 7px;
+  border: 1px solid #ff6f03;
+}
+
+.payment-list-li-img{
+  width: 6vw;
+  height: 6vw;
+  float: left;
+  display: block;
+  background-size:80%;
+  background-repeat:no-repeat;
+  background-position:center center;  
+}
+.payment-list-li-t{
+  font-style: normal;
+  color: #333;
+  float: left;
+  font-size: 3.5vw;
+  line-height: 6vw;
+  display: block;
+  width: auto;
+  margin-left: 10px;
+  margin-top: 2px;
+}
+.money{
+  display: inline-block;
+  color: #ff6f03;
+  font-weight: 400;
+  width: auto;
+  font-size: 3vw;
+  margin-left: 10px;
+}
+.payment-list-li .payment-list-li-a .gou{
+  float: right;
+  width: 5vw;
+  height: 5vw;
+  margin-top: 0.5vw;
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB0AAAAbCAYAAACAyoQSAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA39pVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNS1jMDIxIDc5LjE1NDkxMSwgMjAxMy8xMC8yOS0xMTo0NzoxNiAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDowY2ZlN2FhYy1mYTI3LTA3NDEtYWExZi1lMjA0Mjg3N2Q1ODEiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6RTBFRjExMzZBQzNDMTFFODhEMjZBOTkzNjk0RUJDQ0UiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6RTBFRjExMzVBQzNDMTFFODhEMjZBOTkzNjk0RUJDQ0UiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIChXaW5kb3dzKSI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjU3OWRlNzUxLWE4MjgtZGM0YS1hOTRjLWIyOWE0ZjIwZjdhYSIgc3RSZWY6ZG9jdW1lbnRJRD0iYWRvYmU6ZG9jaWQ6cGhvdG9zaG9wOjYxZmFhMTc2LTI5OWEtMTFlNy1hYWZkLWY2OTU3ZDNjMTY0NiIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PhDmv5kAAAEKSURBVHja7NY/S0JhFIDx9/5BSYRWV6cWhwb3FidpaE6ECLoX+ioOub7U4Gpb0ubQ5uDg5OqgQ9AXCMxu9Rw43cnhKq8E8R74eRGEh3NdTpAkScUYc61OEOHbuJsQG8xh8RjzcYke3jDEWsOu5hNVtNDHsUS7eMctxsgQOIzKW5POBQboyJcalpjpa9hprLVFfvaRpumU50q2DnV92axsDjslfWahrh84fqXbJm+E5g/GR33UR33UR330H0bFlzrk5I1Yo9E+99GOk/1emRJd4AxtPGm88Gvn4Cqyodxf56hjItF7NHGHK7ncHN+9suERTvEqB6REn3GjwYZu7/L/jfSAH+EBLz8CDAD8OjS8gmg9KgAAAABJRU5ErkJggg==) no-repeat center center /100%;
+}
+.payment-list-li.hover .payment-list-li-a .gou{
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB0AAAAbCAYAAACAyoQSAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA39pVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNS1jMDIxIDc5LjE1NDkxMSwgMjAxMy8xMC8yOS0xMTo0NzoxNiAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDowY2ZlN2FhYy1mYTI3LTA3NDEtYWExZi1lMjA0Mjg3N2Q1ODEiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6QjRGOEFBNUFBQzNDMTFFOEI2MkJBMDYzNzFDRUIwNDgiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6QjRGOEFBNTlBQzNDMTFFOEI2MkJBMDYzNzFDRUIwNDgiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIChXaW5kb3dzKSI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjU3OWRlNzUxLWE4MjgtZGM0YS1hOTRjLWIyOWE0ZjIwZjdhYSIgc3RSZWY6ZG9jdW1lbnRJRD0iYWRvYmU6ZG9jaWQ6cGhvdG9zaG9wOjYxZmFhMTc2LTI5OWEtMTFlNy1hYWZkLWY2OTU3ZDNjMTY0NiIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PrTnKAYAAAGHSURBVHja7NZPKARhGMfxZ2ZXyYmbrKy/5ebiTC7UnuTixIaTm4uLKCTlz0H+Ra4ilETcnZ2llIOLnJSLtOy8vm89W4jZ3Wl3SN767DvbTvObed/nfWcds5GIiDEdYrwkmhERzzP0IiYtHGuv3h9//v7h2Mv0DtK4wQ7OoiLSi1nEpbitFe0YdvkYDCEw0yqRtKHlEm6rtqGvIYemXQm/mZ8IlT8R+oIL3IcVarCJHswj9d2J0QIFsv3IGkY1vNbv2oUITWngOEqxqBuOG3R4zzGBa585XMIYyrCMoWzX9fuR3VpOMKPDdvtF4IIGVmh4P5xsQxPNckN9uMKxzpt9kjo8Yw6TiGEV3bnOh1+oveMWrGMERxo8jVNMacHY+UzkUwS5FFJcn8Q++SEucYdGrKAr38rLtXpjGlCCPTTpjXQGKfd8lkyVLvp6tAUNDLJOa/Rfxv+G/2tDHRsaCTk04vq9gorUHmzoAR5DCnzCvl0yWxo6gAZdRqaQc6gvD/vC2MbumwADAJHyfKjhLalGAAAAAElFTkSuQmCC) no-repeat center center /100%;
+}
+
+.message{
+  width:100%;
+  height: auto;
+  background: #fff;
+  padding: 2% 3%;
+  margin-bottom: 50px;
+}
+.message input{
+  display: block;
+  width: 100%;
+  background: #fff;
+  border: 1px solid #ededed;
+  font-size: 3.7vw;
+  padding: 7px;
+  color: #333;
+  font-weight: blod;
+  box-sizing: border-box;
+  line-height: 30px;
+  height: 30px;
+}
+
+
+.cofirm{
+    width: 100%;
+    height: 100rpx;
+    background: white;
+    position: fixed;
+    bottom: 0;
+    line-height: 100rpx;
+}
+.cofirm view{
+  width: 200rpx;
+  height: 100%;
+  float:right;
+  background: #ff7800;
+  color: white;
+  text-align: center;
+}
+.cofirm text:nth-child(1){
+  font-weight: bold;
+  margin-left:36rpx; 
+}
+.cofirm text:nth-child(2){
+  color: #ff7800;
+  font-weight: bold;
+}
+.cofirm text:nth-child(3){
+  color: #888;
+  font-size: 28rpx;
+  margin-left: 10rpx;
+}
+.cofirm text:nth-child(4){
+  color: #ff7800;
+  font-size: 28rpx;
+}

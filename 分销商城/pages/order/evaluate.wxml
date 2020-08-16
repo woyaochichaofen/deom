@@ -1,0 +1,45 @@
+<!-- <view class="head-top"></view> -->
+<view class='head'>
+  <view class='head-head'>
+    <image class='head-head-img png' src='/images/evaluate/pingjia.png' ></image>{{id}}
+  </view>
+
+  <block wx:for="{{goodsList}}">
+    <view class="head-brand">
+      <image class='head-brand-img png' src='{{item.goods_logo}}'></image>
+      <view class='head-text'>
+        {{item.goods_name}}
+        <view class='head-brand-prc'>
+          ￥{{item.goods_price}} <text>x {{item.goods_number}}</text>
+        </view>
+      </view>
+    </view>
+  </block>
+
+  <view class='head-foot'>
+    <text class='head-heji'>共<text class='head-num'>{{detail.total_number}}</text>商品</text> 合计：<text class='head-prc'>￥{{detail.total_price}} </text>(含运费￥{{detail.freight_price}})
+  </view>
+</view>
+<view class='pingfen'>
+   <view class='head-head pinfen-head'>
+    <image class='head-head-img png' src='/images/evaluate/pingjia.png'></image>商品评分
+  </view>
+  <view class='pingfen-text'>
+    <text class='boldtext'>服务态度</text>
+    <block wx:for="{{evaluateList}}">
+      <view class="evaluate {{item.hover}}" bindtap='evaluateClick' data-index="{{index}}"></view>
+    </block>
+    <text class='pingjia'>{{evaluateText}}</text>
+    <!-- <image class='pingfen-img png' wx:for="{{pingjia}}" src='{{item.checked}}' bindtap='pingjia' data-index="{{index}}"></image>
+    <text class='pingjia'>{{string}}</text>  -->
+  </view>
+</view>
+<view class='footer'>
+  <textarea class="footertextarea" placeholder='请详细描述您的问题和意见.....' bindinput='InputRemark'></textarea>
+  <view class='footerdiv' bindtap="chooseimage">
+    <image class='footerimg png' src='/images/evaluate/pinjiaimg.png' hidden="{{tempFilePaths=='' ? false : true}}"></image>
+    <view class='footertext' hidden="{{tempFilePaths=='' ? false : true}}">添加图片</view>
+    <image class='footerbtnimg png' src='{{tempFilePaths}}' mode="aspecFill"></image>
+  </view>
+   <view class='footerbtn' bindtap='evaluateAjax'>立即评价</view>
+</view>

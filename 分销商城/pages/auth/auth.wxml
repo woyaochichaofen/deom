@@ -1,0 +1,10 @@
+<view class="box">
+  <view class="box-image img-auth"></view>
+  <text class="box-text">该小程序授权，向其提供以下权限即可继续操作</text>
+</view>
+
+<view class="hint">获得你的公开信息 (昵称、头像) </view>
+
+<view class='paddingbig'>
+  <button class='green shadow lg block' open-type="getUserInfo" bindgetuserinfo="wxLogin">授权登录</button>
+</view>

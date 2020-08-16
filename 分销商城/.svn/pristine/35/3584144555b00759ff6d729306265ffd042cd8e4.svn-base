@@ -1,0 +1,177 @@
+
+.gwc_body{
+  width:100%;
+  background: #eee;
+}
+/* ----------- 优惠卷-------------- */
+.yhj{
+  background: #f4a040;
+  padding:18rpx 28rpx;
+  font-size: 34rpx;
+  color:#fff;
+  flex: left;
+}
+.yhj view{
+  width:30rpx;
+  height:30rpx;
+  float: right;
+}
+.yhj image{
+  width:100%;
+  height:100%;
+}
+
+/* -----------加入购物车的商品------------ */
+.rowdiv{
+  margin-top:-20rpx;
+  z-index: -1;
+}
+.row{
+  background: #fff;
+  width:100%;
+  height:290rpx;
+  position:relative;
+  margin-top:20rpx;
+}
+
+.row .btn{
+  width:40rpx;
+  height:40rpx;
+  position:absolute;
+  top:128rpx;
+  left:20rpx;
+  z-index: 3;
+}
+
+.row .img{
+  width:234rpx;
+  height:212rpx;
+  float: left;
+  margin-left:80rpx;
+  margin-top:40rpx;
+}
+
+.row .text{
+  border:1px solid rgba(214, 104, 104,0);
+  width:100%;
+  height:100%;
+  float: left;
+  position: relative;
+}
+.row-image{
+  width:100%;
+  height:100%;
+}
+.row .text-view{
+  position: absolute;
+}
+.row .text1{
+  top:54rpx;
+  left:0;
+  font-size: 28rpx;
+  padding-left:340rpx;
+  padding-right:32rpx;
+}
+
+.row .text2{
+  font-size:22rpx;
+  color:#999;
+  left:0;
+  bottom: 116rpx;
+  padding-left:340rpx;
+}
+.row .text3{
+  color:#f4a040;
+  font-size: 34rpx;
+  bottom:58rpx;
+  left:0;
+  padding-left:340rpx;
+}
+
+
+.btn_j{
+  width:146rpx;
+  height:42rpx;
+  border:1rpx solid #bfbfbf;
+  right:20rpx;
+  bottom: 58rpx;
+  display: flex;
+  font-size: 24rpx;
+  color:#333;
+}
+.btn_j-view{
+  width:100%;
+  text-align: center;
+}
+.ja{
+  color:#999;
+  font-size: 28rpx;
+}
+.jan{
+  margin-top:4rpx;
+  color:#313131;
+}
+/* ---------- 去结算-----------  */
+.footer{
+  position: fixed;
+  width:100%;
+  height: 90rpx;
+  bottom: 0;
+  left:0;
+  background: #fff;
+  overflow: hidden;
+  border-top:1rpx solid rgb(235, 234, 234);
+  border-bottom:1rpx solid rgb(235, 234, 234);
+  z-index: 100;
+}
+
+.foot1{
+  width: 140rpx;
+  padding-left: 20rpx;
+  padding-top:32rpx;
+}
+.foot1-view-1{
+  float: right;
+  font-size:34rpx;
+  color:#999;
+}
+.foot1-view-2{
+  width:80rpx;
+  height:40rpx;
+}
+.foot1-view-2-image{
+  width:100%;
+  height:100%;
+}
+.foot2{
+  float: right;
+  width:480rpx;
+}
+.footer1{
+  font-size: 34rpx;
+  padding-top:30rpx;
+  text-align: center;
+}
+.footer2{
+  background:#000;
+  float: right;
+  width:264rpx;
+  color:#f8bf59;
+  text-align: center;
+  font-size: 32rpx;
+  padding:34rpx 0;
+}
+.footer3{
+  display: inline-block;
+}
+.foot1-icon{
+  position: absolute;
+  top: 24rpx;
+  left: 12rpx;
+  display: inline-block;
+}
+
+
+.dibu{
+  height:100rpx;
+}

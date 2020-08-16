@@ -1,0 +1,159 @@
+.header{
+  position: relative;
+}
+.wd{
+  color:#fff;
+  text-align: center;
+  position: fixed;
+  width: 100%;
+  top:74rpx;
+  font-size: 40rpx;
+}
+.head {
+  width: 100%;
+  height:530rpx;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  padding:0px 4px 15px;
+  padding-left:15px;
+  display: flex;
+  color: #fff;
+  align-items: center;
+  justify-content: space-between;
+}
+.head-img{
+  position: absolute;
+  width:100%;
+  height:100%;
+  top:0;
+  z-index: -1;
+}
+
+.head-text{
+  width:300rpx;
+  margin-left:-90rpx;
+}
+.headtextbg{
+  background: #f4a040;
+  padding:6rpx 20rpx;
+  border-radius: 28rpx;
+  display: inline-block;
+}
+.head-btn{
+  width:160rpx;
+  height:166rpx;
+  display: flex;
+}
+.head-btn>view{
+  width:50%;
+  text-align: center;
+}
+.head-btn image{
+  width:38rpx;
+  height:38rpx;
+  margin-top:50%;
+}
+.head-btn2{
+  border:1rpx solid transparent;
+}
+/* ------------------- */
+list.menu.card-menu {
+  margin: -20px 10px 10px;
+}
+
+.ucNav [class*="img-icon"] {
+  width:50px;
+  height:42px;
+  background-size:40px 40px;
+  position:relative;
+  background-position:center center;
+  background-repeat:no-repeat;
+  margin:0 auto 5px;
+
+}
+.ucNav list.grid > item{
+  padding: 0;
+}
+.ucMenu .content {
+  display: flex;
+  align-items: center;
+  height:50px;
+}
+
+.ucMenu image {
+  width: 22px;
+  height: 22px;
+  margin-right: 10px;
+}
+canvas{
+  width: 200px;
+  height: 200px;
+  margin: auto;
+  display: block;
+}
+
+/* ---------------------------- */
+.imgbtn{
+  width:62rpx;
+  height:54rpx;
+  margin-top:14rpx;
+}
+.imgbtn2{
+  height:56rpx;
+}
+.imgbtn3{
+  width:58rpx;
+  height:58rpx;
+  margin-top:8rpx;
+}
+.imgbtn4{
+  width:56rpx;
+  height:62rpx;
+  margin-top:6rpx;
+}
+#imgbtntext{
+  color:#fce175;
+  margin-top:20rpx;
+}
+#imgbtnlist{
+  background: transparent;
+}
+.imgbtnlist{
+  position: absolute;
+  bottom:-24rpx;
+  left:0;
+  width:100%;
+}
+.huiyuan{
+  height:240rpx;
+  width:100%;
+  background: #fff;
+  border:1px solid transparent;
+}
+.huiyuanimg{
+  height:146rpx;
+  margin:0 26rpx;
+  margin-top:40rpx;
+  border-radius: 80rpx;
+  overflow: hidden;
+}
+.huiyuan image{
+  width:100%;
+  height:100%;
+}
+.number{
+  color:red;
+  background: #fff;
+  width:32rpx;
+  height:32rpx;
+  padding-top:4rpx;
+  top:-120rpx;
+  left:-20rpx;
+  border:2rpx solid red;
+  position: relative;
+  margin-left:90rpx;
+  border-radius: 50%;
+  font-size: 24rpx;
+}
+

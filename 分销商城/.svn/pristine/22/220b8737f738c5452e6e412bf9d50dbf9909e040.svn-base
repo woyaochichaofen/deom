@@ -1,0 +1,11 @@
+
+<view class='box shadow-lg' bindtap='toTuihuo'>
+  <avatar class="grey lg round">
+    <text class='icon-myfill'></text>
+  </avatar>
+  <view class='text-xl text-bold margin-tb'>用户未登录</view>
+  <view class='text-gray'>用户未登录可能无法正常查看及购买商品</view>
+</view>
+<view class='padding'>
+  <button class='bg-green shadow lg block' open-type="getUserInfo" bindgetuserinfo="wxLogin">微信登录</button>
+</view>

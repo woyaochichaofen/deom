@@ -1,0 +1,118 @@
+const util = require('../../utils/util');
+const api = require('../../utils/api');
+const app = getApp();
+Page({
+
+  /**
+   * 页面的初始数据
+   */
+  data: {
+    list: [],
+    page: 1,
+    limit: 10,
+    count:0,
+    pageData: false
+  },
+
+  /**
+   * 生命周期函数--监听页面加载
+   */
+  onLoad: function (options) {
+    this.listAjax();
+  },
+
+  /**
+   * 生命周期函数--监听页面初次渲染完成
+   */
+  onReady: function () {
+
+  },
+
+  /**
+   * 生命周期函数--监听页面显示
+   */
+  onShow: function () {
+
+  },
+  listAjax:function(){
+    // 请求数据
+    let that = this;
+    let data = {
+      page: that.data.page,
+      limit: that.data.limit,
+    }
+    util.request(api.Getsubscride, data, 'POST').then(res => {
+      // console.log(res)
+      if (res.success) {
+        if (res.list && res.list.length > 0) {
+          let list = that.data.list;
+          for (let i = 0; i < res.list.length; i++) {
+            list.push(res.list[i])
+          }
+          that.setData({
+            pageData: false,
+            list: res.list,
+            count: res.count
+          })
+        } else {
+          that.setData({
+            pageData: true,
+          })
+        }
+      } else {
+        wx.showToast({
+          title: res.info,
+        })
+      }
+    })
+    wx.stopPullDownRefresh()
+  },
+
+  /**
+   * 生命周期函数--监听页面隐藏
+   */
+  onHide: function () {
+
+  },
+
+  /**
+   * 生命周期函数--监听页面卸载
+   */
+  onUnload: function () {
+
+  },
+
+  /**
+   * 页面相关事件处理函数--监听用户下拉动作
+   */
+  onPullDownRefresh: function () {
+    this.setData({
+      page: 1,
+      list: []
+    })
+    this.listAjax();
+  },
+
+  /**
+   * 页面上拉触底事件的处理函数
+   */
+  onReachBottom: function () {
+    let that = this;
+    let pageData = that.data.pageData;
+    if (pageData == false) {
+      let page = that.data.page;
+      page++;
+      that.setData({
+        page: page
+      })
+      that.list();
+    }
+  },
+
+  /**
+   * 用户点击右上角分享
+   */
+  onShareAppMessage: function () {
+
+  }
+})

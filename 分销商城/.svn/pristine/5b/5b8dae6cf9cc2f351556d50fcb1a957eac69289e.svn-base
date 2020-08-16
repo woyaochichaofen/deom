@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "shopitem": "/pages/components/shopitem/shopitem"
+  },
+  "enablePullDownRefresh": true,
+  "navigationBarTitleText": "海川尚选"
+}

@@ -1,0 +1,23 @@
+<block wx:for="{{goodsList}}">
+  <view class="evaluate">
+    <text class="evaluate-text-1">
+      {{item.nickname}}
+      <text class="evaluate-text-1-text" decode="{{true}}">{{item.create_time}}</text>
+    </text>
+
+    <view class="evaluate-view">
+      <block wx:for="{{item.stars}}">
+        <view class="have"></view>
+      </block>
+    </view>
+
+    <text class="evaluate-text-2">{{item.remark}}</text>
+    <text class="evaluate-text-3" decode="{{true}}" wx:if="{{item.spec_value}}">\n规格：{{item.spec_value}}</text>
+    <image class="Head" src="{{item.userface}}"></image>
+
+    <view class="Exhibition">
+      <image src="{{item.image[0]}}" mode="widthFix" bindload='imgHt' style='height:{{Htei}}'></image>
+    </view>
+  </view>
+</block>
+<view id="pageData" wx:if="{{pageData}}">- 我是有底线的 -</view>

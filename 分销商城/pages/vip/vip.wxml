@@ -1,0 +1,25 @@
+<image src='{{hoverImg}}' class="nb-head" mode="widthFix" bindload='imgH' style='height:{{Hei}}'></image>
+
+<!-- <view class="nb-head img-vipImg"></view> -->
+
+<block wx:for="{{list}}">
+  <view class='nb-row' bindtap='goGoods' data-id="{{item.goods_id}}">
+  <image class='nb-left' src='{{item.goods_logo}}'></image>
+  <view class='nb-right'>
+    <view class='nb-text1'>{{item.goods_name}}</view>
+    <view class='nb-text2'>
+      <text>￥{{item.goods_price}}</text>
+      <text>￥{{item.market_price}}</text>
+    </view>
+    <view class='nb-btn'>立即下单</view>
+  </view>
+</view>
+</block>
+
+<view id="pageData" wx:if="{{pageData}}">- 我是有底线的 -</view>
+
+<view class='floatdiv' hidden='{{hover}}'>
+  <!-- <image class='floatimg img-vipEdit' src='/images/yd3.png'></image> -->
+  <view class='floatimg img-vipEdit'></view>
+  <image class='floatbtn png' src='/images/yd4.png'  bindtap='hideHover'></image>
+</view>

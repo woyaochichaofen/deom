@@ -1,0 +1,63 @@
+/* pages/school/school.wxss */
+.nav{
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  background: #fff;
+  position:fixed;
+  top:0;
+
+}
+.navList{
+  width: 100%;
+  height: auto;
+  display: flex;
+  padding-bottom:20px;
+}
+.nav-li{
+  flex: 1;
+  /* ackground: url('./image/icon/help_icon3.png') no-repeat center 20px/50%; */
+  background-repeat:no-repeat;
+  background-position: center 20px;
+  background-size: 50%;
+
+  text-align: center;
+    /* padding: 10px 0px; */
+    color: #666;
+    font-size: 4.3vw;
+    height: 200rpx;
+    line-height: 400rpx;
+}
+
+.shopList{
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  padding-top:270rpx;
+  padding-bottom: 30rpx;
+}
+
+.shopList-li{
+  width: 100%;
+  height: auto;
+  padding: 0 20rpx;
+  /* background: #fff; */
+  float: left;
+  background-position: calc(100% - 20rpx) center;
+  background-size: 8px;
+  background-repeat: no-repeat;
+  background-color:#fff;
+  border-top: 1px solid #f5f5f5; 
+}
+.shopList-li:first-child{
+  border-top: 0; 
+  
+}
+.shopList-li-text{
+  width: calc(100% - 40rpx);
+  height: auto;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+  padding: 15px 0;
+}

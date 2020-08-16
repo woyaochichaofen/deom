@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>发布机械出租</title>
+    <link rel="stylesheet" href="css/mui.css">
+    <link rel="stylesheet" href="css/font-awesome.css">
+    <link rel="stylesheet" href="css/Reset.css">
+    <link rel="stylesheet" href="css/mui.picker.css">
+    <link rel="stylesheet" href="css/mui.poppicker.css">
+	<link rel="stylesheet" href="css/RecruitWorkers.css">
+    <style>
+       main {
+            height: auto;
+            padding-top: 7rem;
+        }
+        .text2 span {
+            width: 6.5rem;
+            height: 4rem;
+            display: inline-block;
+            color: black;
+            font-size: 1.4rem;
+            margin-right: 1rem;
+            font-weight: bold;
+            text-align-last:justify;
+            margin-left: 1rem;
+        }
+        .text2 {
+            width: 100%;
+            box-sizing: border-box;
+            height: auto;
+            margin-top: 1rem;
+            line-height: 4rem;
+            
+        }
+        .title {
+            width: 80%;
+            height: 3rem;
+            margin: 0 auto;
+            text-align: center;
+            border-bottom: 1px ;
+            border-bottom: 1px solid #CECDD1;
+        }
+        .title h1 {
+            font-size: 1.4rem;
+            color: #3185E6;
+            font-weight: bold;
+        }
+        .text2 input {
+            text-align: left;
+            font-size: 1.4rem ;
+            margin-left: 2rem;
+            font-weight: 400 ;
+            width: 16rem;
+			background-color: #EFEFF4;
+			outline:none;
+        }
+        .text2 textarea {
+            text-align: left;
+            font-size: 1.4rem ;
+            margin-left: 2rem ;
+            height: 12rem;
+            display: block;
+            font-weight: 400 ;
+            width: 80% ;
+        }
+		.text2 button{
+			background-color: #EFEFF4;
+        }
+        .tj{
+            width: 50%;
+            height: 3rem;
+            margin: 0 auto;
+            font-size: 1.4rem;
+            color: #fff;
+            background: linear-gradient(0deg, #1e9aff, #1c54f9);
+        }
+        .submit2{
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+            display: flex;
+            justify-content: center;
+             width: 100%;
+             height: 3rem;
+        }
+        .dz{
+            height: 4.5rem;
+        }
+    
+        .fr h6,span{
+            font-size: 1.3rem;
+        }
+        .upload {
+            width: 100%;
+            height: 3rem;
+            text-align: center;
+            margin: 0  auto;
+        }
+        .upload h1 {
+            margin-top: 2rem;
+            font-size: 1.4rem;
+        }
+        .upload h1 i {
+            color: #1c54f9;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header">
+            <span><a href="javascript:history.go(-1)"><i class="fa fa-angle-left fa-2x"></i></a></span>
+            <span class="text">发布机械出租</span>
+            <span><a href="index.html"><i class="fa fa-home fa-2x"></i></a></span>
+        </div>
+    </header>
+    <main>
+        <div class="title">
+            <h1>请完善以下信息</h1>
+        </div>
+        <div class="text2"><span>标题</span> <input type="text" placeholder="请输入标题"></div>
+        <div class="text2"><span>机械类型</span> <input type="text" value="请选择地区"></div>
+        <div class="text2"><span>地区</span> <button id="showCityPicker" class="mui-btn mui-btn-block">请选择地区</button></div>
+        <div class="text2"><span>详细地址</span> <input type="text" placeholder="请输入详细地址"></div>
+        <div class="text2"><span>联系人</span> <input type="text" placeholder="请输入联系人"></div>
+        <div class="text2"><span>联系电话</span> <input type="text" placeholder="请输入联系电话"></div>
+        <div class="text2">
+            <span style="display: block;">详情</span>
+            <textarea name="con" id="weibo" cols="30" rows="20"  placeholder="请输入简要信息" ></textarea>
+        </div>
+        
+        <div class="fr"><h6>您可以输入<span>500</span>个字，现在剩余<span id="word">500</span>个</h6></div>
+        <div class="upload">
+            <h1>上传图片<i class="fa fa-cloud-upload" aria-hidden="true"></i>(<span style="color: red;">可以不上传</span>)</h1>
+        </div>
+        <dvi class="submit2"><button class="tj">提交</button></dvi>
+    </main>
+    <div class="dz"></div>
+    <footer>
+        <ul>
+            <li><a href="index.html"><img src="images/db1.png" alt=""><p>首页</p></a></li>
+            <li><img src="images/db2.png" alt=""><p>招工信息</p></li>
+            <li><img src="images/db3.png" alt=""><p>发布</p></li>
+            <li><img src="images/db4.png" alt=""><p>工人找活</p></li>
+            <li><a href="MemberCenter.html"><img src="images/db5.png" alt=""><p>会员</p></a></li>
+        </ul>
+    </footer>
+    <script src="js/mui.js"></script>
+    <script src="js/mui.picker.js"></script>
+    <script src="js/mui.poppicker.js"></script>
+    <script src="js/city.data.js"></script>
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script>
+        mui.init();
+			mui.ready(function() {
+				// 二级联示例
+				var cityPicker = new mui.PopPicker({
+					layer: 2
+				});
+				cityPicker.setData(cityData);
+				var showCityPickerButton = document.getElementById('showCityPicker');
+				// 监听确定点击事件
+				showCityPickerButton.addEventListener('tap', function(event) {
+					cityPicker.show(function(items) {
+						showCityPickerButton.innerText = items[0].text + " " + items[1].text;
+						
+						//返回 false 可以阻止选择框的关闭
+						//return false;
+					});
+				}, false);
+			});
+    </script>
+    <script type="text/javascript">
+        $(function(){
+         $("#weibo").keyup(function(){
+          var len = $(this).val().length;
+          if(len > 499){
+           $(this).val($(this).val().substring(0,50));
+          }
+          var num = 500 - len;
+          $("#word").text(num);
+         });
+        });
+   </script>
+
+</body>
+</html>

@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>招工信息</title>
+    <link rel="stylesheet" href="css/Reset.css">
+    <link rel="stylesheet" href="css/RecruitWorkers.css">
+    <link rel="stylesheet" href="css/font-awesome.css">
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <style>
+        nav {
+            width: 100%;
+            height: auto;
+        }
+        .left {
+            width: 80%;
+            background: #F8F8FA;
+            height: 3rem;
+            font-size: 1.2rem;
+            text-indent: 1rem;
+            outline: none;
+            border-bottom-left-radius: 1rem;
+            border-top-left-radius: 1rem;
+            /* border: 1px solid red; */
+        }
+        /* .leftt {
+            width:6rem;
+            background: #F8F8FA;
+            height: rem;
+            font-size: 1.2rem;
+            text-indent: 1rem;
+            outline: none;
+        } */
+        .right {
+            width: 20%;
+            font-size: 1.2rem;
+            height: 3rem;
+            background: #F8F8FA;
+            cursor: pointer;
+            outline: none;
+            border-bottom-right-radius: 1rem;
+            border-top-right-radius: 1rem;
+        }
+        input:focus{
+            background: #F8F8FA;
+        }
+        .search {
+            padding-top: 2rem;
+            width: 80%;
+            height: auto;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .search_list {
+            width: 100%;
+        }
+        .search_list ul {
+            width: 100%;
+            display: flex;
+        }
+        .search_list ul li{
+            font-weight: bold;
+            font-size: 1.4rem;
+            width: 25%;
+            /* background-color: red; */
+        }
+        .ls {
+            color: #059bfe;
+        }
+        .search_list ul li i {
+            position: relative;
+            color: #C6C6C6;
+            bottom: .4rem;
+        }
+        .fa-sort-desc{
+            transform-origin: 6px 12px;
+            transition: all 0.3s ;
+        }
+        .xz{
+            transform: rotate(-180deg);
+            transition: all 0.3s linear;
+        }
+        body{
+            background: #EFEFF4;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header">
+            <span><i class="fa fa-angle-left"></i></span>
+            <span class="text">找活信息</span>
+            <span><i class="fa fa-home"></i></span>
+        </div>
+    <nav>
+        <div class="search">
+            <input class="left" type="search" placeholder="找工人、找班组、找队伍">
+            <input class="right" type="button" value="搜索">
+        </div>
+        <div class="search_list">
+            <ul>
+                <li>背景 <i class="fa fa-sort-desc fa-lg" aria-hidden="true"></i>
+                </li>
+                <li>全部分类 <i class="fa fa-sort-desc fa-lg" aria-hidden="true"></i>
+                </li>
+                <li>全部 <i class="fa fa-sort-desc fa-lg" aria-hidden="true"></i>
+                </li>
+                <li>最新 <i class="fa fa-sort-desc fa-lg" aria-hidden="true"></i>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="announcement" id="s1">
+        <a href="#"><img src="./images/gg.png" alt=""></a>
+        <ul>
+            <li>点工网上线啦!</li>
+        </ul>
+    </div>
+    </header>
+    <div class="dg_content">
+        <div class="new_item">
+            <span><img class="dian" src="./images/dian.png"> 最新招工信息</span>
+            <a href="#">更多</a>
+        </div>
+        <!-- 招工列表 -->
+        <div class="content_list">
+            <a href="#">
+                <div class="content_list_title">
+                    <div class="content_list_title_f">
+                        招聘弱电师傅10名
+                    </div>
+                    <div class="content_list_title_r">
+                        雇佣
+                    </div>
+                </div>
+                <div class="content_list_content">
+                    <span>自我介绍:</span>做过监控的大工和小工各10名；地址黄浦区；有意向联系一下
+                </div>
+                <div class="content_list_bottom">
+                    <div class="leftt">
+                        <a href="#">安防/监控</a>
+                    </div>
+                    <div class="span">
+                        <span>2020-03-07 21:40:05</span>
+                    </div>
+                </div>
+                <div class="content_list_contact">
+                    <div class="content_list_contact_left">
+                        <img src="images/lxr.png" alt=""> <span>刘总</span>
+                    </div>
+                    <div class="content_list_contact_right">
+                        <img class="dw2" src="images/dw2.png" alt=""> <span>上海黄浦区</span>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+    <footer>
+        <ul>
+            <li><a href="index.html"><img src="images/db1.png" alt=""><p>首页</p></a></li>
+            <li><img src="images/db2.png" alt=""><p>招工信息</p></li>
+            <li><img src="images/db3.png" alt=""><p>发布</p></li>
+            <li><img src="images/db4.png" alt=""><p>工人找活</p></li>
+            <li><a href="MemberCenter.html"><img src="images/db5.png" alt=""><p>会员</p></a></li>
+        </ul>
+    </footer>
+<script type="text/javascript">
+    function AutoScroll(obj) {
+        $(obj).find("ul:first").animate({
+            marginTop: "-130px"
+        }, 1000, function() {
+            $(this).css({
+                marginTop: "0px"
+            }).find("li:first").appendTo(this);
+        });
+    }
+    $(document).ready(function() {
+        setInterval('AutoScroll("#s1")', 2500);
+    });
+    $(function(){
+        $(".search_list ul li").click(function(){
+            if($(this).children('i').hasClass("xz")){
+                $(this).children('i').removeClass("xz");
+                $(this).siblings('li').children('i').removeClass("xz");
+                $(this).siblings('li').removeClass("ls");
+            }else{
+                $(this).children('i').addClass("xz");
+                $(this).siblings('li').children('i').removeClass("xz");
+                $(this).siblings('li').removeClass("ls");
+            }
+        })
+    })
+    $(function(){
+        $(".search_list ul li").click(
+            function(){
+            if($(this).hasClass("ls")){
+                $(this).removeClass("ls");
+            }else{
+                $(this).addClass("ls");
+            }
+            })
+    })
+</script>
+</body>
+</html>

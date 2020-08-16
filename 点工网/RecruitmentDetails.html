@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>发布招工</title>
+    <link rel="stylesheet" href="css/RecruitWorkers.css">
+    <link rel="stylesheet" href="css/font-awesome.css">
+    <link rel="stylesheet" href="css/Reset.css">
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <style>
+        main {
+            margin-top: 13rem;
+            height: auto;
+            padding: 0 0 0 0;
+        }
+        main h2 {
+            color: black;
+            padding-left: 3rem;
+            font-weight: bold;
+            font-size: 1.6rem;
+        }
+        main p {
+            padding-left: 3rem;
+            margin-top: 1rem;
+            font-size: 1.3rem;
+        }
+        .text_reminder{
+            width: 90%;
+            margin: 2rem auto 2rem auto;
+            font-size: 1.3rem; 
+        }
+        p span{
+            margin-top: 1rem;
+            font-size: 1.3rem;
+        }
+        .content {
+            width: 95%;
+            padding: 1rem;
+            box-sizing: border-box;
+            background-color: #fff;
+            margin: 1rem auto 0 auto;
+            height: auto;
+            line-height: 2rem;
+            box-shadow: #E7E6E4 0 0 10px;
+            border-radius: 3px;
+        }
+        .content_f{
+            width: 70%;
+            height: auto;
+            /* float: left; */
+        }
+        .content_f h2{
+            margin-top: 0.3rem;
+            color: black;
+            font-weight: bold;
+            font-size: 1.65rem;
+        }
+        .content_f p {
+            color: #B4B4B4;
+            margin-top: .6rem;
+            font-size: 1.3rem;
+        }
+        .fr input {
+            background: #0099FF;
+            width: 8rem;
+            color: #fff;
+            font-size: 1.3rem;
+            margin-top: 1.5rem;
+            height: 3rem;
+            border-radius: 5px;
+        }
+        .fr{
+            text-align: right;
+            width: 30%;
+            font-size: 1.5;
+        }
+        .footer {
+            width: 95%;
+            padding: 1rem;
+            margin: 2rem auto 0 auto;
+            background-color: #fff;
+            height: 4rem;
+            box-shadow: #E7E6E4 0 0 10px;
+            border-radius: 3px;
+            display: flex;
+            bottom: 0;
+            align-items: center;
+        }
+        .footer a {
+            width: 50%;
+            color: #0099FF;
+            font-size: 1.3rem;
+            text-align: center;
+        }
+        .footer .boder {
+            border-right: 1px solid #0099ff;
+        }
+        .announcement {
+            margin: 0;
+        }
+        .announcement a {
+           height: 2.7rem;
+           margin-bottom: 2.7rem;
+        }
+        footer ul li input {
+            margin-top: 0.5rem;
+            width: 7rem;
+            height: 3.5rem;
+            background: url("./images/qn1.png") no-repeat;
+            background-size: 100% 100%;
+            color: #fff;
+            font-size: 1.2rem;
+        }
+        footer ul li input:focus{
+            background: url("./images/qn1.png") no-repeat;
+            background-size: 100% 100%;
+        }
+        .bs {
+            color: #069BFF;
+        }
+        footer ul li i{
+            margin-top: .3rem;
+        }
+        footer ul li p{
+            margin-top: .3rem;
+        }
+        .content .title {
+            padding-left: 2rem;
+            font-size: 1.2rem;
+            box-sizing: border-box;
+            width: 100%;
+        }
+
+        .content .title::after {
+            display: block;
+        content: '';
+        position: relative;
+        top: -1rem;
+        left:8rem;
+        width: 75%;
+        height: .7px;
+        background: #e9e7e7;
+        }
+        .content .title::before{
+            position: relative;
+            content: '';
+            display: inline-block;
+            width: 4px;
+            height: 1.2rem;
+            right: 1rem;
+            background: #3185e6;
+            top: 0.22rem;
+            border-radius: 2px;
+        }
+         p img {
+            width: 2rem;
+            vertical-align: bottom;
+        }
+        .content span {
+            width: 6rem;
+            display: inline-block;
+            height: 2rem;
+            text-align: center;
+            line-height: 2rem;
+            background-color: #F4F4F4;
+            text-align: center;
+            margin-left: 0.4rem;
+        }
+        .info {
+            width: 90%;
+            
+            box-sizing: border-box;
+            margin: 2rem auto 0 auto;
+        }
+        .info img {
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header">
+            <span><a href="javascript:history.go(-1)"><i class="fa fa-angle-left fa-2x"></i></a></span>
+            <span class="text">招工详情</span>
+            <span><a href="index.html"><i class="fa fa-home fa-2x"></i></a></span>
+        </div>
+            <!-- 公告 -->
+        <div class="announcement" id="s1">
+        <a href="#"><img src="./images/gg.png" alt=""></a>
+        <ul>
+            <li>点工网上线啦!</li>
+        </ul>
+    </div>
+    </header>
+    <main>
+        <h2>弱电工</h2>
+        <p>发布时间: 2020-03-10 07:50:51</p>
+        <div class="content">
+            <div class="title">  联系方式</div>
+            <p>联系人:王广录</p>
+            <p>电话号码:123456789</p>
+            <p></p>
+            <div class="title">  规模</div>
+            <p>个 人</p>
+            <p></p>
+            <div class="title">  地区</div>
+            <p><img style="width: 2rem;" src="./images/dw2.png" alt=""> 上海嘉定区</p>
+            <p></p>
+            <div class="title">  工种</div>
+            <p></p>
+            <span>安防/装修</span>
+            <p></p>
+            <div class="title">  自我介绍</div>
+            <p>各位下午好！
+
+                　　下面我将透过简单的面试自我介绍让您来了解我。我是来自XX大学市场营销专业的XXX。我喜欢读书，因为它能丰富我的知识；我喜欢跑步，因为它能够磨砺我的意志，我是一个活泼开朗、热情、执着、有坚强意志的人。
+                
+                　　在读书期间，我已经做过暑期工，是向用餐的客人推销啤酒。那时我则我认为，营销是一种服务。既然是一种服务，就就应做到让大家满意，用热情和真心去做。激情，工作中不可或缺的要素，是推动我们在工作中不断创新，全身心投入工作的动力。激情加上挑战自我的意识，我相信我能胜任这份工作。
+                
+                　　我十分欣赏贵司企业文化：“诚信是我们合作的基础，双赢是我们共同的目标！”我愿与XX文化一齐发展，一齐创造辉煌的明天！</p>
+        </div>
+        <div class="info">
+            <img src="images/info.png" alt="">
+        </div>
+    </main>
+    <p class="text_reminder"><span style="color: red;">温馨提示:</span>此信息由点工网的用户提供，但联系是仍需要注意信息的真假, <span style="color: blue;">防骗指南</span></p>
+    <div style="height: 5rem;background-color: #E7EAED;"></div>
+    <footer>
+        <ul>
+            <li><i class="fa fa-star-o fa-2x" id="sc" aria-hidden="true"></i><p>收藏</p></li>
+            <li><i class="fa fa-exclamation-circle fa-2x" aria-hidden="true"></i><p>投诉</p></li>
+            <li><i class="fa fa-share-alt fa-2x" aria-hidden="true"></i><p>分享</p></li>
+            <li><input type="button" value="拨打电话"></li>
+        </ul>
+    </footer>
+    <script>
+        function AutoScroll(obj) {
+        $(obj).find("ul:first").animate({
+            marginTop: "-130px"
+        }, 1000, function() {
+            $(this).css({
+                marginTop: "0px"
+            }).find("li:first").appendTo(this);
+        });
+    }
+    $(document).ready(function() {
+        setInterval('AutoScroll("#s1")', 2500);
+    });
+    $(function(){
+        $("#sc").click(function(){
+            if($(this).hasClass("bs")){
+                $(this).removeClass("bs");
+                $(this).siblings("p").text("收藏");
+            }else{
+                $(this).addClass("bs");
+                $(this).siblings("p").text("已收藏");
+            }
+        })
+    })
+    </script>
+</body>
+</html>

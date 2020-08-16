@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>邀请工友注册方法</title>
+    <link rel="stylesheet" href="css/RecruitWorkers.css">
+    <link rel="stylesheet" href="css/font-awesome.css">
+    <link rel="stylesheet" href="css/Reset.css">
+    <style>
+        main {
+            text-align: center;
+            width: 100%;
+            font-size: 1.4rem;font-weight:bold;
+            background: #EFEFF4;
+            margin-top: 7rem;
+        }
+        header {
+            z-index: 10;
+        }
+        .content {
+            width: 95%;
+            padding: 1rem;
+            background-color: #fff;
+            margin: 0 auto;
+            height: 11rem;
+            text-align: left;
+            box-sizing: border-box;
+            line-height: 2rem;
+            box-shadow: #E7E6E4 0 0 10px;
+            border-radius: 3px;
+        }
+        .content::before{
+            position: absolute;
+            content: ' ';
+            background-image: url('./images/share-link.png');
+            width: 0.6rem;
+            top: 4.8rem;
+            left: 4rem;
+            height: 2.5rem;
+            background-size: 100% 100%;
+            border-radius: 2px;
+        }
+        .content::after{
+            position: absolute;
+            content: ' ';
+            background-image: url('./images/share-link.png');
+            width: 0.6rem;
+            top: 4.8rem;
+            right: 4rem;
+            height: 2.5rem;
+            background-size: 100% 100%;
+            border-radius: 2px;
+        }
+        .content p {
+            font-size: 1.2rem;
+        }
+        .content input {
+            font-weight: bold;
+            color: black;
+            margin-top: 1.5rem;
+            width: 100%;
+            height: 3.5rem;
+            border-radius: 3px;
+            text-indent: 1rem;
+            font-size: 1.2rem;
+            border: 1px solid #E7E6E4;
+        }
+        .Replication{
+            width: 80%;
+            margin: 2rem auto 0 auto;
+        }
+        .Replication input {
+            font-size: 1.4rem;
+            color: #fff;
+            height: 4rem;
+            border-radius: 3px;
+            background: linear-gradient(90deg, #1E99FF 0%, #1C56F9 100%);
+            width: 100%;
+        }
+    </style>
+</head>
+<body style="background: #EFEFF4;">
+    <header>
+        <div class="header">
+            <span><a href="javascript:history.go(-1)"><i class="fa fa-angle-left fa-2x"></i></a></span>
+            <span class="text">邀请工友注册方法</span>
+            <span><a href="index.html"><i class="fa fa-home fa-2x"></i></a></span>
+        </div>
+    </header>
+    <main>
+        <div class="content">
+            <p>复制下方（你的专享邀请链接），发到QQ群、论坛、贴吧，工友通过你的专享邀请链接来到点工网。</p>
+            <input type="text" name="" id="" value="http://job.ruichangtech.com/mobile/register?uid=255">
+        </div>
+        <div class="Replication">
+            <input type="button" value="点击复制">
+        </div>
+    </main>
+    <footer>
+        <ul>
+            <li><a href="index.html"><img src="images/db1.png" alt=""><p>首页</p></a></li>
+            <li><img src="images/db2.png" alt=""><p>招工信息</p></li>
+            <li><img src="images/db3.png" alt=""><p>发布</p></li>
+            <li><img src="images/db4.png" alt=""><p>工人找活</p></li>
+            <li><a href="MemberCenter.html"><img src="images/db5.png" alt=""><p>会员</p></a></li>
+        </ul>
+    </footer>
+</body>
+</html>
